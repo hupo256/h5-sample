@@ -1,0 +1,200 @@
+.questionHeader{
+  padding:25px 17px;
+  display: flex;
+  align-items: center;
+}
+.preQuestionTitle{
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  font-weight:200;
+  color:#939393;
+  line-height:20px;
+  width: 60px;
+  i{
+    content: "";
+    width:12px;
+    height:12px;
+    border:  solid #939393;
+    border-width: 1px 0 0 1px;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  span{
+    margin-left: 16px;
+  }
+}
+.questionTitle{
+  font-size:24px;
+  font-family:PingFangSC-Medium;
+  font-weight:500;
+  color:#2C2C2C;
+  line-height:34px;
+  text-align:center;
+  width: 225px;
+}
+.questionTitleLeft{
+  margin-left:50px
+}
+.questionTotalTitle{
+  width: 55px;
+  font-size:14px;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:#9C9A9A;
+  line-height:20px;
+  text-align:right;
+  .currentNum{
+    color:#007AFF
+  }
+  .totalNum{
+    color:#9C9A9A
+  }
+}
+
+.questionContent{
+  background:#FFFFFF;
+  box-shadow:0px 4px 20px 0px #BDC6DD;
+  border-radius:9px;
+  margin: auto 21px;
+  padding: 31px 35px;
+  .qLogoDiv{
+    text-align: center;
+    width: 100px;
+    max-height: 100%;
+    margin: 0 auto;
+    .qLogo{
+      border: 0;
+    }
+  }
+  .qTitle{
+    font-size:18px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:#2C2C2C;
+    line-height:25px;
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  .qAnswerBtn,
+  .qAnswerBtnWithInput{
+    height:40px;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    line-height:20px;
+    color:#939393;
+    background:#F2F2F2;
+    border-radius:20px;
+    margin-bottom: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .qAnswerBtnActive{
+    color: #FFFFFF;
+    background:#007AFF;
+  }
+  
+  .qAnwserMultipleContent{
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    .qAnswerItem{
+      background:#F2F2F2;
+      border-radius:20px;
+      color:#989898;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      margin:0 5px 15px 0;
+      padding: 10px 11px;
+      font-size: 14px;
+    }
+    .qAnswerItemActive{
+      color: #FFFFFF;
+      background:#3294FE;
+    }
+  }
+  .qAnswerOtherInput{
+    margin-bottom: 30px;
+    input{
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-bottom:1px solid #D0D0D0;
+      width: 100%;
+      height:28px;
+      font-size:14px;
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:#BEBBBF;
+      line-height:20px;
+    }
+    textarea{
+      border-top-width: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-bottom:1px solid #D0D0D0;
+      width: 100%;
+      height: 28px;
+      font-size:14px;
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:#BEBBBF;
+      line-height:20px;
+      resize:none;
+    }
+  }
+
+  .qAnswerUpload{
+    margin-bottom: 30px;
+    display: flex;
+    .qUploadItem{
+      width:86px;
+      height:86px;
+      background:#ffffff;
+      border-radius:6px;
+      margin-right: 4px;
+      background-size: 86px 86px;
+      background-repeat:no-repeat;
+      .qUploadDelete{
+        position: relative;
+        background-image: url('@static/closebtnsmall.png');
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        background-position: right;
+        margin: 3px 3px -19px;
+        height: 16px;
+      }
+    }
+    .qUploadBtn{
+      width:86px;
+      height:86px;
+      background:#F4F2F2;
+      border-radius:6px;
+      .BtnDiv{
+        width:28px;
+        height:28px;
+        background: url('@static/upload.png') no-repeat;
+        background-size:contain;
+      }
+    }
+  }
+  .qSureBtn{
+    height:40px;
+    background:#007AFF;
+    border-radius:20px;
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:#FFFFFF;
+    line-height:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

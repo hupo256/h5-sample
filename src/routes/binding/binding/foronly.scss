@@ -1,0 +1,102 @@
+$defaultColor: #38395B;
+$grayColor: #38395B;
+
+.onlybox{
+  min-height: 100vh;
+  background: linear-gradient(to top, #666BE8, #4618AA);
+  padding: 8% 6.5% 0;
+  font-size: 15px;
+  line-height: 1.5;
+
+  
+  h3, p{
+    color: $defaultColor;
+    margin-bottom: 12px;
+  }
+  h3{
+    font-size: 17px;
+  }
+
+  .fcc{
+    color: $grayColor;
+    font-size: 13px;
+  }
+}
+
+.tipbox{
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 40px 20px 20px;
+  width: 327px;
+  height: 517px;
+  background: url(@static/bindOnly/bonlybg.png) no-repeat;
+  background-size: contain;
+
+  .tipimg{
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.tipcon{
+  p:nth-child(1){
+    margin: 15px auto;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .fcc{color:#FF6E5A}
+}
+
+.btnbox{
+  position: absolute;
+  width: 80%;
+  top: 77%;
+  left: 50%;
+  transform: translate3D(-50%, -50%, 0);
+
+  h3{margin-bottom: 20px;}
+
+  button{
+    border-radius: 25px;
+    line-height: 2.8;
+    width: 100%;
+    background: linear-gradient(to left, #6064E0, #1E1FB5);
+    color:#fff;
+    font-size: 16px;
+  }
+}
+
+.nfriend{
+  min-height: 100vh;
+  font-size: 0;
+  text-align: center;
+  background: #38395B; 
+
+  button{
+    border-radius: 25px;
+    line-height: 2.8;
+    width: 85%;
+    background: linear-gradient(to left, #00AEB8, #47E9B5);
+    color:#fff;
+    font-size: 16px;
+    transform: translateY(-180%);
+  }
+}
+
+.sharebox{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, .7);
+  position: fixed;
+  top:0;
+  left:0;
+
+  img{
+    width: 75%;
+    position: absolute;
+    right: 7%;
+    top: 2%;
+  }
+}

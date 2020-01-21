@@ -1,0 +1,155 @@
+.share{
+    width:100%;height:100vh;
+    background: #FFF0EE; 
+    //padding-top:57px;
+    box-sizing: border-box;
+}
+.shareBtn{
+    position:fixed;
+    bottom:0;left:0;
+    width:100%;height:48px;
+    line-height:48px;
+    background: linear-gradient(to bottom,#FF8360 ,#FE7763); 
+    color:#fff;
+    text-align:center;
+    font-size:16px;
+}
+.text{
+    margin:0 auto;
+    width:280px;height:488px;
+    background:url('@static/skinBeauty/shareBg.png') no-repeat;
+    background-size:280px 488px;
+    position: relative;
+}
+.shareBg2{
+    width:280px;height:498px;
+    position: absolute;
+    //top:57px;
+    left:47px;
+    background:url('@static/skinBeauty/shareBg2.png') no-repeat;
+    background-size:280px 498px;
+}
+.person{
+    position: absolute;
+    top:36px;left:101px;
+    color:#fff;
+}
+.shareCircle{
+    position: absolute;
+    width:214px;height:214px;
+    top:127px;left:33px;
+}
+.logo{
+    width:60px;height:27px;
+    position: absolute;
+    left:22px;top:444px;
+}
+.jiantou1{
+    width:24px;height:9px;
+    position: absolute;
+    left:68px;top:230px;
+}
+.jiantou2{
+    width:24px;height:9px;
+    position: absolute;
+    left:188px;top:230px;
+}
+.match{
+    width:100px;height:100px;
+    position: absolute;
+    left:90px;top:184px;
+}
+.matchValue{
+    width:40px;
+    text-align:center;
+    position: absolute;
+    top:22px;left:28px;
+    font-size:30px;
+    color:rgba(68, 8, 23, 1);
+    font-family: 'PingFangSC-Medium';
+}
+.matchB{
+    position: absolute;
+    top:38px;right:22px;
+    color:#440817;
+}
+.matchResults{
+    position: absolute;
+    top:59px;left:22px;
+    color: rgba(68, 8, 23, 1);
+    font-size:10px;
+    line-height:14px;
+}
+.des{
+    position: absolute;
+    right:68px;top:450px;
+    color:#fff;
+    font-size:10px;
+}
+.left{
+    width:32px;height:32px;
+    border:3px solid #FFD0D2;
+    position: absolute;
+    left:34px;top:215px;
+    border-radius: 50%;
+}
+.right{
+    width:32px;height:32px;
+    border:3px solid #FFD0D2;
+    position: absolute;
+    right:34px;top:215px;
+    border-radius: 50%;
+}
+.shareGood{
+    width:59px;height:62px;
+    position: absolute;
+    right:40px;top:160px;
+}
+.goods{
+    width:66px;height:54px;
+    padding:10px 15px;
+    line-height:9px;
+    color:#440817;
+    position: absolute;
+    right:36px;top:170px;
+    font-size:7px;
+    text-align:center;
+}
+.tips{
+    width:154px;height:48px;
+    color:rgba(68, 8, 23, 1);
+    font-size:14px;
+    position: absolute;
+    left:62px;top:347px;
+    text-align:center;
+    span{
+        line-height:24px;
+        border-bottom:0.5px dashed rgba(68, 8, 23, 0.3);
+        font-family: 'SourceHanSerif-1d9e7edf7620dfc';
+    }
+}
+.code{
+    width:49px;height:49px;
+    position: absolute;
+    right:17px;top:435px;
+}
+.sharebox{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, .7);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 301;
+  >img{
+    width: 75%;
+    position: absolute;
+    right: 7%;
+    top: 2%;
+  }
+}
+.shareNoMatch{
+    width:216px;height:216px;
+    position:absolute;
+    top:125px;left:29px;
+}

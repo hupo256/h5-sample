@@ -1,0 +1,351 @@
+$ThisOrange:#FF8360;
+$ThisGrey:#440817;
+.searchPage{
+    font-family: 'PingFangSC';
+}
+.noscroll{
+    overflow: hidden;
+    height: 100vh;
+}
+.search{
+    width:100%;
+    display:flex;
+    padding:13px 20px 13px 15px;
+    box-sizing: border-box;
+    background:#fff;
+    position:relative;
+    .back{
+        width:30px;
+        height:30px;
+    }
+    span{
+        display: inline-block;
+        width:30px;
+        line-height:20px;
+        margin:5px 0 8px 10px;
+        color:$ThisOrange;
+        font-size:14px;
+    }
+    form{
+        flex:1;
+        margin-left:10px;
+        input{
+            width:100%;height:32px;
+            line-height:32px;
+            outline:none;
+            border:none;
+            border-radius:20px;
+            box-shadow:0 0 10px 0 rgba(245,191,172,0.3);
+            padding-left:39px;
+            padding-right:20px;
+            font-size:14px;
+            color:#D17855;
+            background: url('@static/skinBeauty/searchBtn.png') no-repeat left 15px center;
+            background-size:16px 16px;
+        }
+    }
+    input::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color:rgba(209,120,85,0.4);
+    }
+    input:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color:rgba(209,120,85,0.4);
+    }
+    input::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color:rgba(209,120,85,0.4);
+    }
+    input::-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color:rgba(209,120,85,0.4);
+    }
+    .empty{
+        position: absolute;
+        right:66px;top:21px;
+        width:16px;height:16px;
+    }
+}
+.goLock{
+    width:100%;
+    padding:10px 20px;
+    margin:5px 0;
+}
+.searchMoudle{
+    padding:0 20px;
+    margin-bottom:24px;
+    p span{
+        color:$ThisGrey;
+        height:20px;
+        line-height:20px;
+        font-size:14px;
+    }
+    div span{
+        display:inline-block;
+        line-height:17px;
+        color:#D17855;
+        font-size:12px;
+        padding:7px 12px 6px 12px;
+        border-radius:15.5px;
+        background:#FFF0EE;
+        margin:8px 8px 0 0;
+    }
+    img{
+        float:right;
+        width:14px;
+        height:16px;
+    }
+}
+.recommend{
+    padding:0 17px 17px;
+    margin-bottom:23px;
+    >p{
+        margin-bottom:8px;
+        color:$ThisGrey;
+        height:20px;
+        line-height:20px;
+        font-size:14px;
+    }
+}
+  //筛选条件
+.choose{
+    padding:0 20px;
+    position:relative;
+    margin-top:20px;
+}
+  .chooseTab{
+    display: flex;
+	align-items: center;
+    justify-content: space-between;
+    height:28px;
+    margin-bottom:10px;
+    .chooseThisOne{
+        flex: 1;
+        background:#FFF0EE;
+        border:1px solid #fff0ee;
+        line-height:17px;
+        color:#D17855;
+        font-size:12px;
+        border-radius:14px;
+        padding:5px 0 6px 0;
+        margin-right:10px;
+        text-align:center;
+        &:last-child{
+            margin-right:0;
+        }
+    }
+    .noMatch{
+        color:rgba(209, 120, 85, 0.4) !important;
+        background:rgba(255, 240, 238, 0.6)!important;
+        border:0 !important;
+    }
+    .active{
+        border-color:#FF835C;
+        font-family: 'PingFangSC-Medium';
+    }
+    .foldIcon {
+        display: inline-block;
+        width: 8px;
+        height: 4px;
+        vertical-align: middle;
+        margin-left:4px;
+        &.up {
+          background: url('@static/skinBeauty/up.png') no-repeat;
+          background-size: 8px 4px;
+        }
+  
+        &.down {
+          background: url('@static/skinBeauty/down.png') no-repeat;
+          background-size: 8px 4px;
+        }
+        &.noMatchBtn{
+          background: url('@static/skinBeauty/noMatch.png') no-repeat;
+          background-size: 8px 4px;
+        }
+      }
+}
+.chooseContent{
+    background:#fff;
+    overflow: scroll;
+    .span1{
+        display:inline-block;
+        width:50%;
+        color:#440817;
+        font-size:14px;
+        height:40px;
+        line-height:40px;
+    }
+    .choosedImg{
+        width:12px;height:9px;
+        vertical-align: middle;
+        margin-right:9px;
+    }
+    label{
+        display:inline-block;
+        width:100%;
+        color:#440817;
+        font-size:14px;
+        height:40px;
+        line-height:40px;
+    }
+    .highChoose{
+        p{
+            height:20px;
+            color:$ThisGrey;
+            font-size:14px;
+        }
+        .p1{
+            margin:10px 0 10px;
+        }
+        .p2{
+            margin:14px 0 10px;
+        }
+        .p3{
+            margin:14px 0 14px;
+        }
+        div{
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            .span2{
+                display:inline-block;
+                flex: 0 0 calc(33.33% - 10px);
+                height:30px;
+                line-height:30px;
+                margin-bottom:10px;
+                background:rgba(255, 240, 238, 0.6);
+                color:#D17855;
+                font-size:12px;
+                border-radius:14px;
+                margin-right:10px;
+                text-align:center;
+                border:1px solid rgba(255, 240, 238, 0.6);
+            }
+        }
+        .radio{
+            float:right;
+            display:inline-block;
+            width:15px;
+            height:15px;
+            margin-top:2.5px;
+            background:#FFF0EE;
+            border-radius:2px;
+        }
+        .true{
+            background: url('@static/skinBeauty/searchChoosed.png') center no-repeat #FFF0EE;
+            background-size:9px 7px;
+            border:1px solid #FF835C;
+        }
+    }
+    .bottomBtn{
+        position:absolute;
+        width:100%;
+        bottom:-40px;left:0;
+        
+        z-index:9999;
+        span{
+            height:39px;
+            line-height:39px;
+            display:inline-block;
+            width:50%;
+            text-align:center;
+            font-size:14px;
+        }
+        span:nth-of-type(1){
+            color:#D17855;
+            background:#fff;
+            border-top:1px solid #eee;
+        }
+        span:nth-of-type(2){
+            color:#fff;
+            background:#FF8360;
+            border-top:1px solid #FF8360;
+        }
+    }
+    .bottomBtn2{
+        position:absolute;
+        width:100%;height:40px;
+        bottom:-40px;left:0;
+        z-index:9999;
+        background:#fff;
+    }
+}
+.chooseContent1{
+    height:280px;
+    max-height:220px;
+}
+.chooseContent2{
+    height:420px;
+    max-height:360px;
+}
+.chooseContent3{
+    height:280px;
+    max-height:240px;
+}
+.categoryActive{
+    color:rgba(209, 120, 85, 1) !important;
+    font-family: 'PingFangSC-Medium';
+}
+.productActive{
+    border:1px solid rgba(255, 131, 92, 1) !important;
+    color:rgba(209, 120, 85, 1) !important;
+    font-family: 'PingFangSC-Medium';
+}
+//搜索列表
+.results{
+    padding:20px;
+}
+.fixTop {
+    position: fixed;
+    padding:10px 20px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    transition: background-color 0.8s;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 999;
+    border-bottom:1px solid #fff0ee;
+    margin:0;
+}
+.noSearchData{
+    text-align:center;
+    margin-top:130px;
+    img{
+        width:146px;height:68px;
+    }
+    p:nth-of-type(1){
+        color:#440817;
+        font-size:14px;
+        line-height:20px;
+    }
+    p:nth-of-type(2){
+        color:rgba(68, 8, 23, 0.4);
+        line-height:17px;
+        margin-top:3px;
+    }
+}
+.noResult{
+    text-align:center;
+    margin:32px 0;
+    img{
+        width:146px;height:68px;
+    }
+    p{
+        color:#440817;
+        font-size:14px;
+        line-height:20px;
+    }
+}
+.noKeyWordsData{
+    margin:32px 0;
+    text-align:center;
+    img{
+        width:146px;height:68px;
+    }
+    p{
+        color:rgba(68, 8, 23, 0.6);
+        font-size:14px;
+        line-height:20px;
+    }
+}

@@ -1,0 +1,54 @@
+.maskCont{
+  background:rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  z-index: 10000000;
+  .bombCont{
+    width:375px;
+    background:rgba(255,255,255,1);
+    border-radius:10px 10px 0px 0px;
+    .bombTitle{
+      height: 49px;
+      padding-left: 20px;
+      padding-right: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size:16PX;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:500;
+      color:rgba(56,57,91,1);
+      border-bottom: 0.5PX solid rgba(225, 225, 230, 1);
+      img{
+        width: 14px;
+      }
+    }
+    .list{
+      border-bottom: 0.5PX solid rgba(225, 225, 230, 1);
+      height: 62px;
+      display: flex;
+      align-items: center;
+      .childImg{
+        width: 48px;
+        height: 48px;
+        margin: 0 10px 0 18px;
+      }
+      .name{
+        width: 260px;
+        font-size:14PX;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(56,57,91,1);
+      }
+      .selectedIcon{
+        width: 16px;
+      }
+    }
+  }
+}
