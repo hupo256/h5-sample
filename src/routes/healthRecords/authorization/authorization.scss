@@ -1,0 +1,263 @@
+$family1:PingFangSC-Medium;
+$family2:DINAlternate-Bold;
+.bottom0{
+    margin-bottom:0 !important;
+}
+.bottom120{
+    padding-bottom:100px;
+}
+.authorization{
+   // padding:0 20px;
+    .choose{
+        .top{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:30px 0 14px 4px;
+            padding-left:4px;
+            div{
+                display:flex;
+                align-items: center;
+            }
+            .left{
+                img{
+                    width:32px;height:32px;
+                    margin-right:12px;
+                }
+                line-height:22px;
+                font-size:16px;
+                font-family:$family1;
+                color:rgba(56,57,91,1);
+                
+            }
+            .right{
+                img{
+                    width:15px;height:15px;
+                    margin-right:6px;
+                }
+                line-height:14px;
+                font-size:14px;
+                color:rgba(136,136,157,1);
+            }
+        }
+    }
+ 
+    .chooseThis{
+        padding:26px 17px 26px 12px;
+        background:rgba(240,249,255,.31);
+        border-radius:10px;
+        max-height:320px;
+        overflow:scroll;
+        box-sizing:border-box;
+        .sunKind{
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom:28px;
+            >div{
+                display:flex;
+                align-items: center;
+                span{
+                    display: inline-block;
+                    max-width:165px;
+                    color:rgba(56,57,91,1);
+                    font-size:15px;
+                    overflow: hidden;
+                    text-overflow:ellipsis;
+                    white-space: nowrap;
+                }
+                img{
+                    width:16px;height:16px;
+                    margin-right:10px;
+                }
+            }
+            p{
+                font-size:12px;
+                color:rgba(136,136,157,1);
+                line-height:12px;
+            }
+        }
+    }
+}
+.saveBtn{
+    position:fixed;
+    left:0;bottom:0;
+    width:calc(100% - 40px);height:60px;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 20px;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+     box-shadow:0px -1px 4px 0px rgba(0,0,0,0.04);
+    p{
+        width:168px;
+        height:40px;line-height:40px;
+        background:linear-gradient(90deg,rgba(96,100,224,1) 0%,rgba(30,31,181,1) 100%);
+        border-radius:20px;
+        font-size:16px;
+        color:rgba(255,255,255,1);
+        text-align:center;
+    }
+    div{
+        display: flex;
+        align-items: center;
+        img{
+            width:13px;height:13px;
+            margin-right:6px;
+        }
+        span{
+            height:14px;line-height:14px;
+            font-size:14px;
+            font-weight:400;
+            color:rgba(136,136,157,1);
+        }
+    }
+  
+}
+.viewMe{
+    background:#F6F6F6;
+    height:100vh;
+    padding-top:10px;
+    >div{
+        display:flex;
+        align-items: center;
+        padding:13px 20px;
+        border-bottom:1px solid #E1E1E6;
+        background:#fff;
+        img{
+            width:42px;height:42px;
+            margin-right:14px;
+        }
+        p{
+            line-height:20px;
+            font-size:14px;
+            color:rgba(56,57,91,1);
+            margin-bottom:6px;
+        }
+        span{
+            line-height:12px;
+            font-size:12px;
+            color:rgba(136,136,157,1);
+        }
+    }
+    >div:last-child{
+        border:none;
+    }
+}
+.nodata{
+    text-align: center;
+    img{
+        width:196px;height:172px;
+        margin-top:112px;
+    }
+    p{
+        height:24px;line-height:24px;
+        font-size:15px;
+        color:rgba(175,176,189,1);
+    }
+}
+.linkman{
+    width:100%;height:auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding-top:20px;
+    margin-left:20px;
+    margin-right:10px;
+    padding-right:10px;
+    box-sizing: border-box;
+    &::-webkit-scrollbar{
+        display:none;
+    }
+    >div{
+        display: inline-block;
+        white-space: nowrap;
+        text-align: center;
+        width:84px;
+        position: relative;
+        img{
+            width:40px;height:40px;
+            top:0;left:0;
+        }
+        .relationName{
+            position: absolute;
+            width:100%;
+            top:30px;left:0;
+            text-align: center;
+            span{
+                display:inline-block;
+                width:38px;
+                font-size:10px;
+                padding:2px 0 1px;
+                background:#fff;
+                border-radius:14px;
+                font-size:12px;
+                color:rgba(136,136,157,1);
+                border:1px solid rgba(136,136,157,0.46);
+            }
+        }
+        .userName{
+            height:14px;line-height:14px;
+            font-size:13px;
+            margin-top:12px;
+            color:rgba(136,136,157,1);
+        }
+    }
+}
+.activeOne{
+    .relationName{
+        span{
+            background:rgba(225,225,255,1) !important;
+            border:1px solid rgba(101,103,229,1) !important;
+            color:#3C3FC9 !important;
+        }
+    }
+    .userName{
+        height:16px; line-height:16px;
+        font-size:16px !important;
+        font-family:$family1;
+        font-weight:500;
+        color:#38395B !important;
+    }
+    .bottomLine{
+        width:14px;height:4px;
+        background:linear-gradient(133deg,rgba(84,87,216,1) 0%,rgba(24,37,170,1) 100%);
+        border-radius:2px;
+        margin:9px 35px 18px;
+    }
+}
+.totalCount{
+    width:100%;height:28px;
+    line-height:28px;
+    background:rgba(249,249,249,1);
+    padding-left:20px;
+}
+
+.tabText{
+    padding-left:20px;
+    padding-bottom:90px;
+    .sunKind{
+        display:flex;
+        align-items: center;
+        box-shadow:0px 1px 0px 0px rgba(215,219,226,0.5);
+        padding:19px 0 18px;
+        img{
+            width:15px;height:15px;
+            margin-right:16px;
+        }
+        h5{
+            height:15px;line-height:15px;
+            font-size:15px;
+            color:rgba(56,57,91,1);
+            font-weight:400;
+        }
+        p{
+            height:12px; line-height:12px;
+            font-size:12px;
+            color:rgba(136,136,157,1);
+            margin-top:6px;
+        }
+    }
+}

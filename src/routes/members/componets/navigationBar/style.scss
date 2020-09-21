@@ -1,0 +1,39 @@
+.titleBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .titleBarCon{
+    height: 44px;
+    position: relative;
+  }
+
+  &.white{
+    background: transparent;
+    h1{
+      color:rgba(255,255,255,1);
+    }
+  }
+  h1{
+    margin:0;
+    text-align: center;
+    font-size:16px;
+    font-weight:500;
+    line-height: 44px;
+    color:#393C40;
+  }
+  .backIcon{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(0,-50%);
+  }
+}
+
+.titleBarBlank{
+  width: 100%;
+  position: relative;
+}

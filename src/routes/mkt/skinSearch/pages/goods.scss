@@ -1,0 +1,490 @@
+.details{
+    font-family:PingFangSC;
+}
+.noscroll{
+    overflow: hidden;
+    height: 100vh;
+}
+.medium{
+    font-family: 'PingFangSC-Medium';
+}
+.goods{
+    width:100%;height:200px;
+    background:#fff;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position:relative;
+    img:nth-of-type(1){
+        width:160px;
+        height:160px;
+    }
+    img:nth-of-type(2){
+        width:30px;
+        height:30px;
+        position:absolute;
+        top:29px;left:15px;
+    }
+    span{
+        display:inline-block;
+        width:100px;height:28px;
+        padding:4px 0 4px 3px;
+        line-height:20px;
+        text-align:center;
+        color:#fff;
+        font-size:14px;
+        position: absolute;
+        bottom:0;right:0;
+        background-size:cover;
+        border-radius:100px 0 0 0;
+        background: linear-gradient(to bottom,rgba(255, 131, 96, 1) ,rgba(254, 119, 99, 1));
+        box-shadow: 0 4px 8px 0 rgba(252, 205, 177, 1);
+        font-family: 'PingFangSC-Medium';
+    }
+}
+.goodsInfo{
+    width:100%;
+    background: url('@static/skinBeauty/goodBg.png') no-repeat;
+    background-size:100%;
+    padding:20px 20px 0;
+    box-sizing: border-box;
+    p:nth-of-type(1){
+        font-size:20px;
+        color:#440817;
+    }
+    p:nth-of-type(2){
+        margin:8px 0;
+    }
+    .span1{
+        display:inline-block;
+        height:18px;
+        line-height:18px;
+        label{
+            color:#FF8360;
+            font-size:12px;
+            font-family: 'PingFangSC-Medium';
+        }
+        span{
+            color:#FF8360;
+            font-size:18px;
+            font-family: 'PingFangSC-Medium';
+        }
+        
+    }
+    .span2{
+        display:inline-block;
+        height:18px;
+        line-height:18px;
+        color:#440817;
+        font-size:13px;
+        margin-left:4px;
+    }
+    .span3{
+        display:inline-block;
+        background:#FFF0EE;
+        color:#FF835C;
+        border-radius:9px;
+        padding:2px 9px;
+        margin-right:4px;
+    }
+}
+.infoDes{
+    width:100%;height:auto;
+    box-sizing: border-box;
+    text-align:center;
+    padding:32px 58px 20px;
+    background:#fff;
+    border-radius:10px;
+    margin-top:17px;
+    box-shadow:0 0 10px 0 rgba(252,205,177,0.4);
+    .circle{
+        width:139px;height:139px;
+        padding:6px 7px 7px 8px;
+        margin:0 auto;
+        position: relative;
+        .matchValue{
+            position: absolute;
+            width:50px;
+            text-align:center;
+            top:29px;left:41px;
+            font-size:40px;
+            color:rgba(68, 8, 23, 1);
+            font-family: 'PingFangSC-Medium';
+        }
+        .matchB{
+            position: absolute;
+            top:54px;right:34px;
+            color:#440817;
+        }
+        .matchResults{
+            position: absolute;
+            top:74px;left:34px;
+            color: rgba(68, 8, 23, 0.8);
+            font-size:14px;
+            line-height:24px;
+            font-family:'SourceHanSerif-1d9e7edf7620dfc';
+            font-weight:bold;
+        }
+        .matchXiaoyu{
+             position:absolute;
+             top:46px; left:34px;
+             width:12px; height:13px
+        }
+        .matchValue2{
+            position: absolute;
+            width:50px;
+            text-align:center;
+            top:29px;left:46px;
+            font-size:40px;
+            color:rgba(68, 8, 23, 1);
+            font-family: 'PingFangSC-Medium';
+        }
+    }
+    .advise span{
+        font-size:20px;
+        padding:3px 0;
+        color:rgba(68, 8, 23, 1);
+        border-bottom:0.5px dashed rgba(68, 8, 23, 0.3);
+        font-family:'SourceHanSerif-1d9e7edf7620dfc';
+        font-weight:bold;
+        margin-bottom:5px;
+    }
+    .des span{
+        line-height:24px;
+        color:rgba(68, 8, 23, 0.8);
+        font-size:14px;
+        font-family:'SourceHanSerif-1d9e7edf7620dfc';
+        border-bottom:0.5px dashed rgba(68, 8, 23, 0.3);
+    }
+    .btns{
+        margin-top:32px !important;
+        span{
+            display:inline-block;
+            width:104px;height:36px;
+            border-radius:20px;
+            label{
+                margin-left:14px;
+                line-height:36px;
+                font-size:14px;
+            }
+        }
+        .yes1{
+            background:url('@static/skinBeauty/yes.png') #FDF3EE 29px 11px no-repeat;
+            background-size:14px 14px;
+            margin-right:10px;
+            label{
+                color:#FF835C;
+            }
+        }
+        .no1{
+            background:url('@static/skinBeauty/no.png') #FDF3EE 22px 11px no-repeat;
+            background-size:14px 14px;
+            label{
+                color:#FF835C;
+            }
+        }
+        .yes2{
+            background:url('@static/skinBeauty/yes2.png') #FF8360 29px 11px no-repeat;
+            background-size:14px 14px;
+            margin-right:10px;
+            label{
+                color:#fff;
+            }
+        }
+        .no2{
+            background:url('@static/skinBeauty/no2.png') #FF8360 22px 11px no-repeat;
+            background-size:14px 14px;
+            label{
+                color:#fff;
+            }
+        }
+    }
+}
+.goLock{
+    margin:16px 0;
+}
+.infoTitle{
+    width:100%;
+    padding-top:25px !important;
+    img:nth-of-type(1){
+        display: inline-block;
+        width:24px;height:24px;
+        vertical-align: middle;
+    }
+    img:nth-of-type(2){
+        display: inline-block;
+        width:18px;height:18px;
+        float:right;
+        margin-top:3px;
+    }
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        font-size:16px;
+        color:#440817;
+        height:22px;
+        line-height:22px;
+        margin-left:6px;
+    }
+    label{
+        display:inline-block;
+        color:rgba(68, 8, 23, 0.6);
+        line-height:17px;
+        vertical-align: middle;
+    }
+}
+.analysis{
+    background: linear-gradient(to bottom,#FFFFFF ,#FFF0EE); 
+    .title{
+        background: linear-gradient(to right,#FF9191 ,#FF9D7E); 
+        display: flex;
+        span{
+            display:inline-block;
+            color:#fff;
+            height:40px;
+            line-height:40px;
+            text-align:center;
+            font-size:12px;
+            flex-shrink: 1;
+        }
+        .column{
+            width:50px;
+            flex-shrink:0
+        }
+       .column100{
+            width:44.84%;
+       }
+       .column123{
+            width:55.16%;
+        }
+    }
+    .content{
+        display: flex;
+        border-bottom:1px dotted #D17855;
+        >span{
+            height:70px;
+            border-right:1px dotted #E8B8A6;
+            padding:13px;
+            &:last-child{
+                border:0;
+            }
+        }
+        .column{
+            width:50px;
+            flex-shrink:0;
+        }
+       .column100{
+            width:44.84%;
+            color:#FF8360;
+            display:flex;
+            align-items:center;
+            overflow: hidden;
+            .line{
+                line-height:20px;
+                word-wrap: break-word;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+            }
+       }
+       .column123{
+            width:55.16%;
+            color:#440817;
+            display:flex;
+            align-items:center;
+            overflow: hidden;
+            .line{
+                line-height:20px;
+                word-wrap: break-word;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp:2;
+            }
+        }
+        .column2,.column4{
+            text-align:center;
+            line-height:44px;
+            img{
+                width:16px;height:16px;
+                vertical-align:middle;
+            }
+        }
+        .column5{
+            color:#440817;
+            line-height:44px;
+            text-align:center;
+            img{
+                width:12px;height:16px;
+            }
+        }
+       
+    }
+    .upOrDown{
+        width:76px;height:24px;
+        line-height:24px;
+        margin:20px auto 0;
+        color:#D17855;
+        border-radius:13.5px;
+        font-size:12px;
+        span{
+            margin-left:8px;
+        }
+    }
+    .down{
+        background:url('@static/skinBeauty/showAll.png') #FFD9CF 59px no-repeat;
+        background-size:10px 6px;
+    }
+    .up{
+        background:url('@static/skinBeauty/showOne.png') #FFD9CF 59px no-repeat;
+        background-size:10px 6px;
+    }
+    .analysisList .content2:nth-of-type(5){
+        border:0;
+    }
+    .analysisList{
+        position: relative;
+    }
+    .jianbian{
+        position: absolute;
+        width:100%;height:50px;
+        bottom:45px;left:0;
+        background: linear-gradient(to bottom,#FFF0EE00,#FFF1EF82,#FFF1EFFF) !important; 
+    }
+}
+.explain{
+    width:100%;
+    box-sizing: border-box;
+    background:#FFF0EE;
+    padding:20px 20px 40px;
+    margin-bottom: 49px;
+    .des{
+        background:#FFF7F6;
+        border-radius: 10px;
+        .head{
+            width:82px;height:32px;
+        }
+        .info{
+            padding:7px 20px 20px;
+        }
+        .title{
+            color:#440817;
+            font-size:12px;
+            height:17px;line-height:17px;
+            font-family: 'PingFangSC-Medium';
+        }
+        .mt8{
+            margin-top:8px;
+        }
+        .mt20{
+            margin-top:20px;
+        }
+        .text{
+            color:rgba(68,8,23,0.6);
+            font-size:12px;
+            line-height:20px;
+        }
+        .levels p{
+            color:#440817;
+            font-size:12px;
+            padding-left:24px;
+            line-height:24px;
+            //margin-top:6px;
+            font-family: 'PingFangSC-Medium';
+        }
+        .levels p:nth-of-type(1){
+            background:url('@static/skinBeauty/one.png') 0 4px no-repeat;
+            background-size:16px 16px;
+        }
+        .levels p:nth-of-type(2){
+            background:url('@static/skinBeauty/four.png') 0 4px no-repeat;
+            background-size:16px 16px;
+        }
+        .levels p:nth-of-type(3){
+            background:url('@static/skinBeauty/seven.png') 0 4px no-repeat;
+            background-size:16px 16px;
+        }
+        .levels p:nth-of-type(4){
+            background:url('@static/skinBeauty/wu.png') 0 4px no-repeat;
+            background-size:16px 16px;
+        }
+        .huoxing{
+            color:rgba(68,8,23,0.6);
+            font-size:12px;
+            padding-left:24px;
+            margin-top:8px;
+            line-height:20px;
+            background:url('@static/skinBeauty/huo.png') 0 2px no-repeat;
+            background-size:16px 16px;
+        }
+        .match{
+            font-size:12px;
+            color:#440817;
+            line-height:27px;
+            font-family: 'PingFangSC-Medium';
+            span:nth-of-type(1){
+                width:70px;
+            }
+        }
+    }
+}
+.bottomBar{
+    position:fixed;
+    left:0;bottom:0;
+    width:100%;
+    //height:49px;
+    box-shadow:0 0 10px 0 #FCCDB1;
+    background:#fff;
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+    span{
+        display:inline-block;
+        height:18px;
+        margin:16px 0 15px;
+        flex:auto;
+        text-align:center;
+        border-right:0.5px solid #E9BCAB;
+        &:last-child{
+            border:0;
+        }
+        label{
+            color:#D17855;
+            font-size:13px;
+            vertical-align: middle;
+            margin-left:6px;
+        }
+        img{
+            width:13px;height:13px;
+            vertical-align: middle;
+        }
+    }
+}
+.noOurImage{
+    width:375px !important;
+    height:200px !important;
+}
+.waiting{
+    position: relative;
+    margin-top:17px;
+    p:nth-of-type(1){
+        position: absolute;
+        top:176px;left:114px;
+        color:rgba(68, 8, 23, 1);
+        font-size:18px;
+        font-family: 'PingFangSC-Medium';
+        line-height:25px;
+    }
+    p:nth-of-type(2){
+        position: absolute;
+        top:209px;left:54px;
+        color:rgba(68, 8, 23, 0.6);
+        font-size:12px;
+        line-height:17px;
+    }
+}

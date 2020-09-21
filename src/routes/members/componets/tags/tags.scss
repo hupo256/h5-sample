@@ -1,0 +1,30 @@
+.tagbox{
+  font-size: 12px;
+  width: 84%;
+  // height: 100px;
+  // padding-top: 38px;
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  bottom: 43px;
+  transform: translateX(-50%);
+
+  li{
+    display: inline-block;
+    font-size: 12px;
+    line-height: 17px;
+    width: 25%;
+    color: #FEDCCB;
+    text-align: center;
+    font-weight:400;
+    img{
+      width: 36px;
+      margin-bottom: 6px;
+    }
+
+    span{
+      display: block;
+    }
+  }
+}

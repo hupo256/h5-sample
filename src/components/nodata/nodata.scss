@@ -1,0 +1,40 @@
+.noData{
+  font-size: 17PX;
+  color:#666;
+  padding-top: 22px;
+  text-align: center;
+  p{
+    padding:10px 0;
+    font-size:14PX;
+    font-weight:500;
+    color:rgba(189,189,189,1);
+  }
+  .imgbox {
+    width: 229px;
+    height: 163px;
+    margin: 0 auto;
+    img {
+      width:229px;
+      height:163px;
+    }
+  }
+}
+.nobtn,.nobtn button{ 
+  display: block;
+  margin: 107px auto 0 auto;
+  a{
+      font-size:16PX;
+      color: #fff
+  }
+}
+.noImg{
+  width: 100px;
+  padding-top: 15%;
+}
+.goShoppingBtn {
+  width:142px;
+  height:43px;
+  background:rgba(0,122,255,1);
+  border-radius:23px;
+  color: #fff;
+}

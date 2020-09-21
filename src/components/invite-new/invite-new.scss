@@ -1,0 +1,38 @@
+.inviteImg {
+  display: block;
+  margin: 21px auto 0;
+  img {
+    width: 100%;
+  }
+}
+
+.successModel {
+  width: 110%;
+  min-height: 100vh;
+  background: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0;
+  left: -16px;
+  .successInvite {
+      box-sizing: border-box;
+      width: 300px;
+      height: 307px;
+      background: url(@static/paysuccess/invite-model.png) no-repeat;
+      background-size: 100% 100%;
+      margin: 100px auto 0;
+      img {
+          display: block;
+          width: 215px;
+          height: 59px;
+          margin: 0 auto;
+          padding-top: 235px;
+      }
+      .closeInvite {
+          width: 38px;
+          height: 38px;
+          background: url(@static/paysuccess/close-invite.png) no-repeat;
+          background-size: 100% 100%;
+          margin: 70px auto 0;
+      }
+  }
+}

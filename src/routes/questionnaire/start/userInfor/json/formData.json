@@ -1,0 +1,30 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "result": {
+    "id": 2822639035662336,
+    "userId": 2780224654753792,
+    "relationId": "3",
+    "relationName": "宝宝",
+    "userName": "张小宝",
+    "birthday": "2019-12-07",
+    "expectDate": null,
+    "sex": "male",
+    "nation": null,
+    "registryOffice": null,
+    "status": 0,
+    "createTime": "2019-12-12 15:11:49",
+    "updateTime": "2019-12-12 15:11:49",
+    "headImgType": null,
+    "flag": null,
+    "height": 33,
+    "weight": null,
+    "leftVision": null,
+    "rightVision": null,
+    "personalSickList": "",
+    "collectorKindList": [
+      1,
+      1
+    ]
+  }
+}

@@ -1,0 +1,202 @@
+$highFontColor: rgba(56, 57, 91, 1);
+$defaultFontColor: rgba(56, 57, 91, 1);
+$grayFontColor: rgba(56, 57, 91, 0.6);
+$titleFontColor: #241053;
+$cardMargin: 30px 20px;
+$cardPadding: 20px;
+$cardRadius: 10px;
+
+.noscroll{
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.shareRedPacker{
+  background: $titleFontColor;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+
+  .banBox{position: relative;}
+  .headBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0;
+    left: 0;
+
+    span{
+      position: absolute;
+      color: #29203C;
+      font-size: 12px;
+      background: #FEC647;
+      padding: .5em .8em;
+      right: 0;
+      top: 24px;
+      border-radius: 15px 0 0 15px;
+    }
+
+    b{
+      position: absolute;
+      width: 100%;
+      top: 79%;
+      left: 0;
+      font-size: 18px;
+      color:#fff;
+      font-weight: 600;
+    }
+
+    .touchPacker{
+      top: 83%;
+    }
+    .phoneNum{
+      top:75%;
+      font-weight: 400;
+      font-size: 12px;
+    }
+  }
+
+  .moreInfor{
+    margin: 10px 24px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: inset 0 0 22px rgba(101, 103, 229, 0.4);
+    max-height: 390px;
+    overflow: hidden;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color:#38395B;
+
+    h3{
+      font-size: 16px;
+      color: $titleFontColor;
+      margin-bottom: 10px;
+      text-align: center;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span{padding: 0 15px;}
+      &:before,
+      &:after{
+        content: '';
+        width: 38px;
+        height: 3px;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(249, 110, 94, 1));
+      }
+
+      &:after{
+        background: linear-gradient(to left, rgba(255, 255, 255, 1), rgba(249, 110, 94, 1));
+      }
+    }
+
+    li{
+      position: relative;
+      padding: .8em 0;
+      color: $highFontColor;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        box-sizing: border-box;
+        height: 1px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        transform: scaleY(0.5); 
+        transform-origin: 0 0;
+      }
+
+      >div{
+        display: flex;
+        align-items: center;
+
+        img{
+          width: 30px;
+          height: 30px;
+          border-radius: 15px;
+          margin-right: 10px;
+        }
+      }
+
+      p{
+        color:$grayFontColor;
+      }
+    }
+
+    li:last-child{
+      padding-bottom: 0;
+      &:after{
+        display: none;
+      }
+    }
+
+    .nobodyShare{
+      padding: 2rem 2rem .75rem 2rem;
+      text-align: center;
+
+      p{padding-top: 1rem;}
+    }
+  }
+
+  .sharebox{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .7);
+
+    img{
+      position: absolute;
+      width: 100%;
+      top: 20px;
+      right: 0;
+    }
+  }
+
+  .sharebox1{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .7);
+
+    img{
+      position: absolute;
+      width: 100%;
+      top: 20px;
+      right: 0;
+    }
+  }
+}
+
+.modalBtn{
+  padding: .75em 0;
+  display: flex;
+  justify-content: space-between;
+
+  button{
+    padding: .75em 0;
+    width: 45%;
+    font-size: 15px;
+    border-radius: 30px;
+    color:#fff;
+    background: linear-gradient(to left, #1E1FB5, #6064E0);
+
+    &.btnCan{
+      background: #EFEFFC;
+      color: #6567E5;
+    }
+  }
+}

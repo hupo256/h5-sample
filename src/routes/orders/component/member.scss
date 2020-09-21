@@ -1,0 +1,278 @@
+
+.border1px {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1PX;
+    background: #e7e5e5;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+  }
+}
+
+.submitBanner {
+  display: none;
+  position: relative;
+  width: 100%;
+
+  img {
+    display: block;
+  }
+
+  .detailBtn {
+    width: 24px;
+    height: 76px;
+    background: url('@static/sharebtn.png') no-repeat;
+    background-size: 100% 100%;
+
+    .text {
+      display: block;
+      width: 12px;
+      font-size: 11PX;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    &.posiRight {
+      position: absolute;
+      top: 50%;
+      right: 0px;
+      transform: translate3d(0, -50%, 0);
+    }
+  }
+}
+
+.linkmanLand {
+  display: flex;
+  align-items: center;
+
+  .avator {
+    display: block;
+    width: 43PX;
+    height: 43PX;
+  }
+
+  .brandCon {
+    flex: 1;
+
+    h3 {
+      font-size: 16PX;
+      font-family: PingFangSC-Medium;
+      font-weight: 500;
+      color: #212121;
+    }
+
+    p {
+      font-size: 14PX;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: #757575;
+    }
+  }
+
+  .brandTitle {
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .tag {
+    margin-left: 4px;
+    display: inline-block;
+    width: 25PX;
+    height: 13PX;
+    background: url('@static/vip.png') no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle;
+  }
+
+  .headImg {
+    width: 80PX;
+    text-align: center;
+    overflow: hidden;
+
+    .avator {
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      width: 43px;
+      height: 43px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 10PX;
+      color: #212121;
+
+      .userName {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 60px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .switchIcon {
+        display: inline-block;
+        width: 14px;
+        margin-left: 4px;
+        font-size: 10PX;
+        vertical-align: middle;
+      }
+    }
+
+    img{
+      border-radius: 50%;
+    }
+  }
+}
+
+.memberList {
+  color: #565454;
+
+  li {
+    padding: 0 15px;
+    height: 50px;
+    line-height: 50px;
+
+    &:before{
+      background:#E7E5E5;
+    }
+
+    &:first-child{
+      border-top: 1PX solid #E7E5E5;
+    }
+
+    .info {
+      flex: 1;
+      font-size: 14PX;
+      font-weight: 500;
+      text-align: right;
+      color: #212121;
+
+      .price {
+        text-decoration: line-through;
+        color: #BDBDBD;
+      }
+      
+      .red {
+        color:#FF505E;
+      }
+    }
+
+    .black {
+      color:rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.agreeModal {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.6);
+
+  .popCon {
+    margin: 16px 20px 0px 20px;
+  }
+
+  .agreeCon {
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 4PX;
+
+    .agreeHeadBg {
+      color: #fff;
+      height: 78px;
+      background: url('@static/member-agree-head.png') no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+
+      h3 {
+        font-size: 16PX;
+        font-family: 'PingFangSC-Regular';
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 14PX;
+        color: #E0E0E0;
+        font-weight: 400;
+      }
+    }
+
+    .nomalHeadBg {
+      p {
+        width: 100%;
+        height: 22px;
+        font-size:16PX;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+        color: #212121;
+        text-align: center;
+        padding: 29px 0 5px;
+      }
+    }
+    .agreeList {
+      padding: 12px 22px 0px 22px;
+      height: calc(100vh - 220px);
+      overflow: auto;
+
+      @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3){
+        .scrollCon{
+          height: calc(100vh - 255px);
+        }
+      }
+  
+      @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3){
+        .scrollCon{
+          height: calc(100vh - 255px);
+        }
+      }
+  
+      @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2){
+        .scrollCon{
+          height: calc(100vh - 255px);
+        }
+      }
+
+      h4 {
+        font-size: 12PX;
+        font-family: 'PingFangSC-Medium';
+        font-weight: 500;
+        color: #212121;
+      }
+
+      p {
+        color: #757575;
+        font-size: 12PX;
+        font-family: 'PingFangSC-Regular';
+        font-weight: 400;
+        word-break: break-all;
+        text-align: justify;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .closeBtn {
+    margin: 16px 0px;
+    text-align: center;
+
+    .closeIcon {
+      padding: 4px;
+      font-size: 28PX;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,104 @@
+.titleBar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .titleBarCon{
+    height: 44px;
+    position: relative;
+  }
+
+  &.white{
+    background: transparent;
+    h1{
+      color:rgba(255,255,255,1);   
+    }
+  }
+  h1{
+    margin:0;
+    text-align: center;
+    font-size:16px;
+    line-height: 44px;
+    color:#393C40;
+    font-weight: 600;
+  }
+  .backIcon{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translate(0,-50%);
+  }
+}
+
+.titleBarBlank{
+  width: 100%;
+  position: relative;
+}
+.titleTab{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translate(0,-50%);
+  .titleItem{
+    font-size:14px;
+    font-weight:600;
+    color:#88889D;
+    line-height:14px;
+    margin: 0 20px;
+    position: relative;
+    &.active{
+      color:#6567E5;
+      &:after{
+        content:"";
+        display: block;
+        width:54px;
+        height:2px;
+        background: #6567E5;
+        position: absolute;
+        bottom: -6px;
+        left:50%;
+        transform: translate(-50%,0);
+
+
+      }
+    }
+  }
+}
+.control_area{
+  position: absolute;
+  top: 50%;
+  right:20px;
+  transform: translate(0,-50%);
+  display: flex;
+  align-items: center;
+  .control_item{
+    &.collect{
+      width: 20px;
+      height: 19px;
+      background-image: url(@static/collect.png);
+      background-size: 100%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      &.active{
+        background-image: url(@static/collectYellow.png);
+      }
+
+    }
+    &.share{
+      width: 18px;
+      height: 18px;
+      background: url(@static/shareTwo.png);
+      background-size: 100%;
+    }
+    &+.control_item{
+      margin-left: 15px;
+    }
+  }
+}

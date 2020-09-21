@@ -1,0 +1,107 @@
+$family1:PingFangSC-Medium;
+$family2:DINAlternate-Bold;
+.lists{
+    height:100%;
+}
+.padding{
+    width:100%;
+    padding:8px 20px;
+    box-sizing: border-box;
+    background:#fff;
+}
+.records{
+    display: flex;
+    align-items:top;
+    justify-content:space-between;
+    background:rgba(95,127,254,0.28);
+    box-shadow:0px 2px 10px 0px rgba(0,0,0,0.08);
+    .desc{
+        display:flex;
+        align-items:top;
+        justify-content:space-between;
+        .leftImg{
+            width:66px;height:66px;
+            background:rgba(249,249,255,1);
+            border:3px solid rgba(239,239,252,1);
+            border-radius: 50%;;
+            margin-right:14px;
+        }
+        .marginTop{
+            margin-top:7px;
+        }
+        .middle{
+            p:nth-of-type(1){
+                line-height:16px;
+                font-size:16px;
+                font-family:$family2;
+                color:rgba(56,57,91,1);
+                max-width:140px;
+            }
+            p:nth-of-type(2){
+                line-height:14px;
+                font-size:12px;
+                color:rgba(96,97,124,1);
+                margin:8px 0 16px;
+            }
+            p:nth-of-type(3){
+                line-height:12px;
+                font-size:12px;
+                color:#88889D;
+            }
+        }
+    }
+    .taskBtn{
+        height:12px;line-height:12px;
+        padding:8px 14px;
+        background:linear-gradient(135deg,rgba(96,100,224,1) 0%,rgba(30,31,181,1) 100%);
+        border-radius:14px;
+        font-size:12px;
+        color:rgba(255,255,255,1);
+        text-align:center;
+        margin-top:26px;
+    }
+    .whiteBtn{
+        background:rgba(239,239,252,1) !important;
+        box-shadow:0px 2px 7px 0px rgba(198,195,236,0.66);
+        border-radius:14px;
+        color:#8081E9 !important;
+    }
+}
+.goods{
+    padding:16px 12px;
+    position: relative;
+    border-radius:10px 10px 0 0;
+    .status{
+        position: absolute;
+        top:0;left:0;
+        width:67px;height:28px;
+    }
+}
+.date{
+    height:30px;
+    line-height:30px;
+    background:#a6adf3;
+    border-radius:0px 0px 10px 10px;
+    font-size:12px;
+    color:rgba(255,255,255,1);
+    padding-left:98px;
+
+}
+.points{
+    padding:16px 12px;
+    position: relative;
+    border-radius:10px;
+}
+.noRecords{
+    text-align:center;
+    img{
+        width:200px;height:176px;
+        margin:109px 0 10px;
+    }
+    p{
+        height:24px;line-height:24px;
+        font-size:16px;
+        color:rgba(56,57,91,1);
+
+    }
+}

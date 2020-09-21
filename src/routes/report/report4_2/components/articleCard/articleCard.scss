@@ -1,0 +1,62 @@
+@import "../../report4_2.scss";
+.article {
+  @include title();
+  > div:nth-of-type(3) {
+    padding: 20px 14px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.articleItem {
+  box-shadow: 0 2px 8px 0 rgba($color: #000000, $alpha: 0.15);
+  border-radius: 8px;
+  width: 130px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  overflow: hidden;
+  font-size: 0;
+  > img {
+    width: 100%;
+    height: 71px;
+  }
+}
+.articleTextbox {
+  padding: 11px 7px;
+  position: relative;
+  height: 97px;
+  box-sizing: border-box;
+  > p:nth-of-type(1) {
+    font-size: 12px;
+    line-height: 17px;
+    width: 116px;
+    overflow: hidden;
+    color: #38395b;
+    font-weight: 500;
+  }
+  > p:nth-of-type(2) {
+    font-size: 10px !important;
+    line-height: 10px !important;
+    color: #88889d;
+    margin: 7px 0 13px 0;
+  }
+  > div {
+    position: absolute;
+    bottom: 7px;
+    width: 53px;
+    height: 17px;
+    background-color: #fff0ee;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 9px !important;
+    line-height: 0;
+    color: #ff6d59;
+    > p {
+      padding-top: 1px;
+    }
+  }
+}

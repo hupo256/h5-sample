@@ -1,0 +1,232 @@
+@import "../../reportHome.scss";
+$v: 1vw/3.75;
+.suggest_panel {
+  @include card();
+  height: auto;
+  padding: 12px 15px 30px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+.suggest_title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+  padding-bottom: 12px;
+  position: relative;
+  &:after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #979797;
+    opacity: 0.3;
+  }
+  h1{
+    font-size:20px;
+    font-weight:600;
+    color:rgba(56,57,91,1);
+    line-height:20px;
+    margin: 0;
+    padding: 0;
+  }
+  .title_right{
+    text-align: right;
+    p{
+      font-size:10px;
+      font-weight:400;
+      color:rgba(136,136,157,1);
+      line-height:13px
+
+    }
+  }
+}
+.tipsTxt{
+  background: url(@static/report5/questionMark.png) no-repeat;
+  background-size: 12px;
+  background-position: left center;
+  padding: 9px 0 8px 13px;
+  font-size:12px;
+  font-weight:400;
+  color:rgba(136,136,157,1);
+  line-height:11px;
+  
+}
+
+// echarts
+.echart_content{
+  width: 100%;  
+}
+.echart_content_con{
+  width: 100%;
+  height: 250px;
+  position: relative; 
+}
+.echart_radar{
+  width: 100%;
+  height: 250px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.echart_line_con{
+  padding: 0 18px;
+  position: relative; 
+  margin-top: 16px;
+  margin-bottom: 25px !important;
+  .echart_line+.echart_line{
+      margin-top: 20px;
+  }
+}
+.whiteBlock{
+  width: 100%;
+  height: 20px;
+}
+.echart_para{
+  padding: 0 28px;   
+  font-size:14px;
+  font-weight:400;
+  color:rgba(136,136,157,1);
+  line-height:22px; 
+  position: relative;
+  
+  span+span:before{
+      content:"、";
+      display: inline-block;
+  }
+  .echart_para_con{
+      position: relative;
+      z-index: 5;
+  }
+  .dotLeft{
+      width: 16px;
+      position: absolute;
+      left: 7px;
+      top: 0;
+      img{
+          width: 100%;
+      }
+  } 
+  .dotRight{
+      width: 16px;
+      position: absolute;
+      right: 7px;
+      bottom: 0;
+      img{
+          width: 100%;
+          transform: rotate(-180deg)
+      }
+  }   
+}
+.echart_jump{
+
+  padding: 0 23px;
+  font-size:14px;
+  font-weight:400;
+  color:rgba(101,103,229,1);
+  line-height:14px;
+  margin-top: 24px;
+  span{
+    background:url(@static/reportEg/jtPurple.png) no-repeat;
+    background-position: center right;
+    background-size: 5 * $v;
+    padding-right: 14px;
+  }
+  
+}
+
+.tips_modal{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 100;
+  .modal_box{
+      width:310px;
+      height:auto;
+      background:rgba(255,255,255,1);
+      border-radius:10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);  
+  }
+  .modal_close{
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: url('@static/report5/close.png') no-repeat 50% 50%;
+      background-size: 100%;
+
+  }
+  .modal_content{
+      padding: 28px 26px 33px;
+      h1{
+          font-size:16px;
+          font-weight:400;
+          color:rgba(96,97,124,1);
+          line-height:16px;
+          margin:0;
+          padding: 0;
+      }
+      .modal_para_con{
+          margin-top: 8px;
+          p{
+              font-size:14px;
+              font-weight:400;
+              color:rgba(96,97,124,1);
+              line-height:20px;
+              &+p{
+                  margin-top: 10px;
+              }
+          }
+      }
+  }
+}
+
+.empty_chart{
+  padding-top: 7px;
+  img{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  h1{
+    margin: 8px auto 0;
+    padding: 0;
+    width:290px;
+    font-size:12px;
+    font-weight:400;
+    color:rgba(136,136,157,1);
+    line-height:18px;
+  }
+  .btn{
+    width:260px;
+    height:34px;
+    line-height: 34px;
+    background:rgba(101,103,229,1);
+    border-radius:17px;
+    margin: 22px auto 0;
+    font-size:14px;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+    text-align: center;
+    &.disabled{
+      background:#EFF1FA;
+      color: #AFB0BD
+    }
+  }
+}

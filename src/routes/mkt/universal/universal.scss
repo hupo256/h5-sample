@@ -1,0 +1,105 @@
+$v: 1vw/3.75;
+.page {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling:touch;
+}
+.landBox {
+    width: 100vw;
+    height: 200vw;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.lastBox {
+    width: 100vw;
+    height: 839 * $v;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+@mixin jumpRow {
+    display: flex;
+    justify-content: space-between;
+    > a {
+        width: 105 * $v;
+        height: 81 * $v;
+        padding: 47 * $v 10 * $v 0;
+        box-sizing: border-box;
+        > div {
+            padding-top: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 87 * $v;
+            height: 26 * $v;
+            background-color: #32a8e8;
+            font-size: 12 * $v;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 29.5 * $v;
+            box-shadow: 0 2 * $v 4 * $v 0 rgba($color: #8ed6f3, $alpha: 0.6);
+            animation: flicker infinite 1s ease-in-out;
+        }
+    }
+}
+@mixin jumpSingke {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 65 * $v;
+    > a {
+        width: 214 * $v;
+        height: 81 * $v;
+        padding-top: 30 * $v;
+        padding-left: 16 * $v;
+        box-sizing: border-box;
+        > div {
+            padding-top: 1px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120 * $v;
+            height: 36 * $v;
+            background-color: #32a8e8;
+            font-size: 16 * $v;
+            font-weight: bold;
+            color: #fff;
+            border-radius: 29.5 * $v;
+            box-shadow: 0 2 * $v 4 * $v 0 rgba($color: #8ed6f3, $alpha: 0.6);
+            animation: flicker infinite 1s ease-in-out;
+        }
+    }
+}
+@keyframes flicker {
+    50% {
+        transform: scale(0.86, 0.86);
+    }
+}
+.childernBox {
+    padding: 338 * $v 20 * $v 0;
+    > div:nth-of-type(1) {
+        @include jumpRow();
+    }
+    > div:nth-of-type(2) {
+        margin-top: 104 * $v;
+        @include jumpRow();
+    }
+    > div:nth-of-type(3) {
+        @include jumpSingke();
+    }
+}
+.adultBox {
+    padding: 93 * $v 20 * $v 0;
+    > div:nth-of-type(1) {
+        @include jumpRow();
+    }
+    > div:nth-of-type(2) {
+        margin-top: 104 * $v;
+        @include jumpRow();
+    }
+    > div:nth-of-type(3) {
+        @include jumpSingke();
+    }
+    > div:nth-of-type(4) {
+        @include jumpSingke();
+    }
+}

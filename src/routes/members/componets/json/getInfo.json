@@ -1,0 +1,14 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "result": {
+    "imageUrl": null,
+    "username": null,
+    "endTime": null,
+    "showEndTime": null,
+    "isMember": 0,
+    "isContract": 0,
+    "discount": 10.0,
+    "isLogin": 1
+  }
+}

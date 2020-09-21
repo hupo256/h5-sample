@@ -1,0 +1,22 @@
+.footButtonBox {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    > div {
+        flex-grow: 1;
+        > p {
+            min-height: 49px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+.default {
+    color: #fff;
+    background-color: orange;
+    font-size: 14px;
+    border: solid white 0.5px;
+}
