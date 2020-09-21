@@ -1,13 +1,23 @@
 /* eslint-disable max-len */
-const NODE_ENV = process.env.NODE_ENV
-const thePublicPath = NODE_ENV === 'local' ? '/' : '/andall-sample/'
-let staticImgPath = NODE_ENV === 'local' ? '/' : `https://dnatime-dev.oss-cn-hangzhou.aliyuncs.com/static/${NODE_ENV}/sample/`
-if (NODE_ENV === 'production' || NODE_ENV === 'pre') staticImgPath = 'https://qd-img.dnatime.com/static/sample/'
+let NODE_ENV = process.env.NODE_ENV
+let MODULE = process.env.MODULE
+let imgUrl='';
+let thePublicPath = NODE_ENV === 'local' ? '/' : '/andall-sample/'
+let staticImgPath = NODE_ENV === 'local' ? '/' : `https://andall-dev.oss-cn-hangzhou.aliyuncs.com/static/${NODE_ENV}/sample/`
+if (NODE_ENV === 'production' || NODE_ENV === 'pre') staticImgPath = 'https://qd-img.andall.com/static/sample/'
+if (NODE_ENV === 'bundle') {
+  NODE_ENV = 'production'
+  thePublicPath = `/mkt/${MODULE}/`
+  staticImgPath = ''
+  imgUrl='images/'
+}
 module.exports = {
   env: NODE_ENV,
   thePublicPath,
   staticImgPath,
-  sourcemaps: NODE_ENV === 'local',
+  imgUrl,
+  MODULE,
+  sourcemaps: NODE_ENV === 'local' || NODE_ENV.includes('dev'),
   vendors: [
     'react',
     'react-dom',

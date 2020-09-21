@@ -8,7 +8,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const ip = require('ip')
 const resolve = dir => path.join(__dirname, dir)
 const project = require('./project.config.js')
-const { thePublicPath, sourcemaps, env } = project
+const { thePublicPath, sourcemaps, env, staticImgPath, MODULE, imgUrl } = project
 const isProduction = env === 'production'
 
 const webpackConfig = {
@@ -21,11 +21,11 @@ const webpackConfig = {
       '@src': resolve('./src'),
       '@static': resolve('./static/sample'),
     },
-    extensions: ['.js', '.json', '.css', '.scss', '.less', '.jsx']
+    extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.less']
   },
   output: {
     filename: 'js/[name].[hash:8].js',
-    path: resolve('dist'),
+    path: resolve(MODULE || 'dist'),
     publicPath: thePublicPath,
     chunkFilename: 'js/[name].[chunkhash:8].chunk.js'
   },
@@ -34,22 +34,23 @@ const webpackConfig = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader?cacheDirectory=true'
-        }
+        loader: 'babel-loader?cacheDirectory=true'
       },
       {
         test: /\.(sa|sc)ss$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../' }
+          },
           {
             loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: isProduction ? 'H[hash:base64:6]' : '[path][name]-[local]',
               sourceMap: sourcemaps,
-              minimize: true
+              minimize: true,
+              localIdentName: isProduction ? 'H[hash:base64:6]' : '[path][name]-[local]',
             }
           },
           'postcss-loader',
@@ -59,7 +60,10 @@ const webpackConfig = {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: { publicPath: '../' }
+          },
           {
             loader: 'css-loader',
             options: {
@@ -98,8 +102,9 @@ const webpackConfig = {
           loader: 'url-loader',
           options: {
             limit: 8192,
-            publicPath: project.staticImgPath,
-            name: '[name].[ext]'
+            publicPath: staticImgPath,
+            // name: `[name].[ext]`
+            name: `${imgUrl}[name].[ext]`
           }
         }
       },
@@ -140,14 +145,14 @@ const webpackConfig = {
     }
   },
   plugins: [
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(['' + MODULE, 'dist']),
     new HtmlWebPackPlugin({
       template: './src/index.html',
       minify: {
         caseSensitive: false,            //是否大小写敏感
-        collapseBooleanAttributes: true, //是否简写boolean格式的属性如：disabled="disabled" 简写为disabled 
+        collapseBooleanAttributes: true, //是否简写boolean格式的属性如：disabled="disabled" 简写为disabled
         collapseWhitespace: true,        //是否去除空格
-        removeComments:true,             //去掉注释
+        removeComments: true,             //去掉注释
       },
     }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
@@ -157,10 +162,10 @@ const webpackConfig = {
     }),
     new webpack.DefinePlugin({
       'process.env': {   // 引入的React的产品版本
-        'NODE_ENV': '"production"', 
-        // 'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        // 'NODE_ENV': '"production"',
+        'NODE_ENV': JSON.stringify(env)
       },
-      'IS_ENV': JSON.stringify(process.env.NODE_ENV)
+      'IS_ENV': JSON.stringify(env)
     }),
   ],
   devtool: sourcemaps ? 'eval-source-map' : 'source-map',
@@ -175,8 +180,8 @@ const webpackConfig = {
 
 const Uglify = [
   new ParallelUglifyPlugin({
-    cacheDir: '.cache/', 
-    uglifyJS:{
+    cacheDir: '.cache/',
+    uglifyJS: {
       output: {
         beautify: false,
         comments: false,
@@ -197,7 +202,7 @@ const Uglify = [
   new webpack.optimize.ModuleConcatenationPlugin()
 ]
 
-if(!sourcemaps){
+if (!sourcemaps) {
   const pluginsArr = webpackConfig.plugins
   webpackConfig.plugins = [...pluginsArr, ...Uglify]
 }
