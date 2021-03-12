@@ -1,0 +1,153 @@
+.quesCont{
+  background: #fff;
+  .quesHeader{
+    margin: 36px auto 16px;
+    width:334px;
+    font-size:16PX;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(44,44,44,1);
+    line-height:24PX;
+  }
+  .quesTime{
+    margin: 0 auto 35px;
+    width:334px;
+    font-size:14PX;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(252,147,87,1);
+    line-height:22PX;
+  }
+  .questionsCont{
+    width:345px;
+    margin: 0 auto 18px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 10px 0px rgba(189,198,221,0.42);
+    border-radius:9px;
+    box-sizing: border-box;
+    padding: 0 35px 14px;
+    .questionTitle{
+      width:275px;
+      font-size:16PX;
+      font-family:PingFangSC-Medium,PingFang SC;
+      font-weight:500;
+      color:rgba(48,48,48,1);
+      line-height:22PX;
+      padding-top: 36px;
+      span{
+        color:rgba(26,119,254,1);
+      }
+    }
+    .answerCont{
+      width:265px;
+      display: flex;
+      .inputItem{
+        height: 21px;
+        border: 0;
+        width: 100%;
+        display: block;
+      }
+      .unit{
+        font-size:15PX;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(205,205,205,1);
+        line-height:21PX;
+        padding-right: 14px;
+      }
+    }
+    .input{
+      .answerCont{
+        border-bottom: 1PX solid rgba(208,208,208,.72);
+        justify-content: space-between;
+        padding: 15px 0 8px;
+      }
+    }
+    .single, .multiple{
+      .answerCont{
+        flex-direction: column;
+        label{
+          padding-top: 19px;
+          input{
+          }
+        }
+      }
+    }
+    .single{
+      label{
+        display: flex;
+        align-items: center;
+        font-size:16PX;
+        color:rgba(59,59,59,1);
+        input{
+          width: 0;
+          display: none;
+        }
+        .inputJ{
+          width:15px;
+          height:15px;
+          border:1px solid rgba(33,51,90,1);
+          background: #fff;
+          display: inline-block;
+          border-radius: 50%;
+          box-sizing: border-box;
+          margin-right: 10px;
+        }
+      }
+      label.selected{
+        .inputJ{
+          border:4px solid rgba(13,112,254,1);
+        }
+      }
+    }
+    .multiple{
+      label{
+        display: flex;
+        align-items: center;
+        font-size:16PX;
+        color:rgba(59,59,59,1);
+        input{
+          width: 0;
+          display: none;
+        }
+        .inputJ{
+          width:15px;
+          height:15px;
+          border:1px solid rgba(33,51,90,1);
+          background: #fff;
+          display: inline-block;
+          border-radius: 2px;
+          box-sizing: border-box;
+          margin-right: 10px;
+        }
+      }
+      label.selected{
+        .inputJ{
+          border: 0;
+          width: 17px;
+          margin-right: 8px;
+          background: url(@static/bindOnly/icon_selected.png) no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+    .submitBtn{
+      width:265px;
+      height:40PX;
+      background:rgba(0,122,255,1);
+      border-radius:20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size:14PX;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(255,255,255,1);
+      line-height:normal;
+      margin: 45px auto 0;
+    }
+    .noClick{
+      background:rgba(195,195,205,1);
+    }
+  }
+}

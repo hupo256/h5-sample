@@ -1,0 +1,80 @@
+.loversCode{
+  width: 100vw;
+  height: 100vh;
+  background:rgba(0,0,0,.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .loversCont{
+    position: relative;
+    width: 290px;
+    height: 360px;
+    background: #ff8199;
+    .loversCodeBg{
+      position: absolute;
+      width: 100%;
+      left: 0;
+    }
+    .detail{
+      position: absolute;
+      width: 100%;
+      p{
+        text-align: center;
+        color:rgba(255,255,255,1);
+      }
+      .title{
+        font-size:22PX;
+        font-family:PingFangSC-Medium;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:22PX;
+        text-align: center;
+        padding-top: 24px;
+        margin-bottom: 5px;
+      }
+      .subTitle{
+        font-size:16PX;
+        font-family:PingFangSC-Medium;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:16PX;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .code{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        left: 92px;
+        top: 141px;
+      }
+      .desc1{
+        font-size:15PX;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:15PX;
+        text-align: center;
+        margin-bottom: 185px;
+      }
+      .desc2{
+        font-size:11PX;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(255,255,255,1);
+        line-height:18PX;
+        text-align: center;
+        margin-bottom: 9px;
+      }
+    }
+  }
+  .close{
+    width: 34px;
+    height: 34px;
+    margin-top: 20px;
+  }
+}

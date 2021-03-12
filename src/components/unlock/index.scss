@@ -1,0 +1,297 @@
+.list{
+  padding: 16px;
+  margin-bottom: 14px;
+  box-sizing: border-box;
+  background:rgba(255,255,255,1);
+  box-shadow: 0px 2px 8px 2px rgba(224, 224, 224, 1);
+  border-radius: 2px;
+
+  div{
+    span{
+      color:#181818;
+      font-weight:600;
+      font-size: 16PX;
+  }
+  }
+  p{
+      padding: 4px 0 3px 0;
+      color:#A29E9E;
+      font-size: 13PX;
+  }
+  .through{
+    text-decoration:line-through;
+    color:#8D8D8D;
+    padding-top: 8px;
+  }
+  .redColor{
+    color:#F96860;
+    padding-top: 5px;
+  }
+}
+
+.recomStand {
+  .through{
+    text-decoration:line-through;
+    color:#8D8D8D;
+    padding-top: 8px;
+  }
+  .redColor{
+    color:#F96860;
+    padding-top: 5px;
+  }
+}
+
+.btn{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  button{
+      display: block;
+      width: 70px;
+      height: 28px;
+  }
+}
+
+.redBtn{
+  width: 163PX;
+  height: 40PX;
+  line-height: 40PX;
+  background: #CD2E3D;
+  border: 1px solid #A51523;
+  border-radius: 6PX;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  font-family: PingFangSC-Regular;
+  font-size: 16PX;
+  color: #F1C891;
+  position: absolute;
+  left: 50%;
+  margin-left: -81.5PX;
+  bottom: 0;
+}
+
+.luckyMoney{
+  width: 347px;
+  height: 460px;
+  background: url(@static//luckymoney.png) no-repeat;
+  background-size:100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+  color: #B22A35;
+  padding-top:81px ;
+  box-sizing: border-box;
+  position: relative;
+  .dsctit{
+      padding-top: 170px;
+  }
+}
+.caption{
+  font-size: 11PX;
+  color: #C1B99E;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.img{
+  width: 79px;
+  height: 79px;
+  position: relative;
+  border-radius:9px;
+  img{
+      border-radius:9px;
+      max-width: 100%;
+      max-height: 100%;
+  }
+}
+.p15{
+  padding:15px;
+}
+.unlockImg{
+
+  &:before{
+      content: "";
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      display: block;
+      width: 35px;
+      height: 35px;
+      background: url(@static/unlock-icon.png) no-repeat;
+      background-size: cover;
+      margin:-17.5px 0 0 -17.5px;
+  }
+}
+
+.unlockTask {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+  border-radius: 4px;
+
+  .lockIcon {
+    display: block;
+    position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -16px;
+    transform: translate3d(0, -50%, 0);
+    width: 32px;
+    height: 32px;
+    background: url('@static/card/lock02.png') no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+button.redBtns{
+  width: 82px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #007AFF;
+  border-radius: 17px;
+  color:#fff;
+}
+
+.modalTxt{
+  color:#929395;
+  > span{
+      display: block;
+      font-weight:500;
+      font-size: 14PX;
+      padding-bottom: 5px;
+  }
+  p{
+      padding-top: 10px;
+      color:#979799;
+      line-height:17px;
+  }
+}
+
+.modalBom{
+  padding-top: 30px;
+  span{
+    height:45px;
+    line-height:45px;
+    text-align: center;
+    font-size: 15PX;
+    width:142px;
+    &:first-child{
+      height:45px;
+      line-height:45px;
+      border-radius:23px;
+      color:#919193;
+      margin-right: 8px;
+      background: url(@static/border.png) no-repeat;
+      background-size: 100%;
+    }
+  }
+  a{
+      span{
+          display: block;
+      }
+  }
+}
+
+.modalWrap {
+  .closeWrap {
+    display: flex;
+    margin: 0px auto;
+    width: 28PX;
+    height: 28PX;
+    color: #fff;
+    border: 1PX solid #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    .closeIcon {
+      font-size: 13PX;
+    }
+  }
+}
+
+.unlockModal {
+  width: 255px;
+  height: 350px;
+  background: url('@static/unlock-modal-bg.png') no-repeat;
+  background-size: 100% 100%;
+
+  .modalCon {
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .waitPic {
+      margin-left: auto;
+      margin-right: auto;
+      width: 136px;
+      height: 127px;
+      background: url('@static/wait-bg.png') no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  .btnWrap {
+    display: flex;
+    justify-content: center;
+
+    .modalBtn {
+      display: flex;
+      font-size: 12PX;
+      font-family: 'PingFangSC-Semibold';
+      font-weight: 600;
+      color:#007AFF;
+      align-items: center;
+      justify-content: center;
+      line-height: normal;
+      border: 1PX solid #007AFF;
+
+      &.pullRight {
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        transform: translateY(-50%);
+      }
+
+      &.fillBtn {
+        background-color: #007AFF;
+        color:rgba(255, 255, 255, 1);
+      }
+    }
+
+    .largeBtn {
+      width: 82px;
+      height: 22px;
+      border-radius: 17px;
+    }
+
+    .smallBtn {
+      width: 58px;
+      height: 16px;
+      font-size: 10PX;
+      border-radius: 8px;
+      font-size: 10PX;
+    }
+  }
+
+  h3 {
+    font-size: 16PX;
+    font-family: 'PingFangSC-Medium';
+    font-weight: 500;
+    color:rgba(33, 33, 33, 1);
+  }
+
+  p {
+    font-size: 13PX;
+    font-family: 'PingFangSC-Regular';
+    font-weight: 400;
+    color:rgba(117, 117, 117, 1);
+    line-height: 20px;
+    word-break: break-all;
+    text-align: justify;
+  }
+}

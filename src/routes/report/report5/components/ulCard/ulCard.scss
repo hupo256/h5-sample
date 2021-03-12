@@ -1,0 +1,31 @@
+@import "../../style.scss";
+
+.literature {
+  @include title();
+  > div:nth-of-type(3) {
+    padding: 20px 25px 20px 23px;
+    color: #60617c;
+  }
+}
+.pointText {
+  display: flex;
+  margin-bottom: 15px;
+  > div {
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #60617c;
+    margin-right: 11px;
+    margin-top: 7px;
+  }
+  > p {
+    font-size: 14px;
+    line-height: 20px;
+    width: 272px;
+    flex-wrap: wrap;
+    text-align: justify;
+    text-align-last: left;
+    word-wrap: break-word;
+    word-break: normal;
+  }
+}

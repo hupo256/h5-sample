@@ -1,0 +1,46 @@
+.bombCont{
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .cont{
+    width: 270px;
+    background: #fff;
+    border-radius:8px;
+    .body{
+      padding: 20px 20px 15px;
+      font-size:15PX;
+      font-family:PingFangSC-Regular;
+      font-weight:400;
+      color:rgba(33,33,33,1);
+      line-height:21PX;
+      text-align: center;
+      border-bottom: 1PX solid #E0E0E0;
+    }
+    .footer{
+      height: 50px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      span{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        border-right: 1PX solid #f2f2f2;
+        font-size:18PX;
+        color:rgba(33,33,33,1);
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+      }
+      span:last-child{
+        border-right: 0;
+      }
+    }
+  }
+}

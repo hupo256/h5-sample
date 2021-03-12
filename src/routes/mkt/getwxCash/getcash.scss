@@ -1,0 +1,147 @@
+$highFontColor: rgba(87, 194, 142, 1);
+$defaultFontColor: rgba(56, 57, 91, 0.8);
+$grayFontColor: rgba(56, 57, 91, 0.6);
+$titleFontColor: rgba(56, 57, 91, 1);
+$cardMargin: 30px 20px;
+$cardPadding: 20px;
+$cardRadius: 10px;
+
+.getwxCash{
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.6;
+  background: #762121;
+  height: 100vh;
+  box-sizing: border-box;
+
+  >img{
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .redpopbox{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 3;
+
+    .popcon{
+      width: 100%;
+      position: absolute;
+      left:50%;
+      top:50%;
+      transform: translate3d(-50%, -50%, 0);
+
+      >div{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+      }
+
+      .cashBox{
+        top: 17%;
+
+        >p{
+          color: #A87F57;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          b{padding:0 5px;}
+          span{
+            font-size: 12px;
+            transform: scale3d(.8, .8, 1);
+          }
+        }
+
+        .numBox{
+          font-size: 24px;
+          color:#FF6565;
+          display: flex;
+          align-items: baseline;
+          justify-content: center;
+
+          span:nth-child(2){
+            font-size: 50px;
+            font-weight: 600;
+          }
+        }
+
+        .grayNum{
+          color: #E9CC8C;
+        }
+        
+      }
+
+      .getNow{
+        top:51%;
+        font-size: 12px;
+
+        >img{
+          width: 192px;
+          height: 70px;
+        }
+
+        p{
+          margin-top: -15px;
+          color: #FCDBDB;
+
+          span, u{
+            display: block;
+            color: #FFBEBE;
+          }
+        }
+      }
+
+      .reachCeiling{
+        top: 57%;
+        font-size: 18px;
+        >p{
+          line-height: 1;
+          padding-top: 10px;
+          color: #FCDBDB;
+
+          span{
+            font-size: 12px;
+            color: #FFBEBE;
+          }
+        }
+      }
+
+      .botmTex{
+        top:90%;
+        font-size: 12px;
+        color: #FFBEBE;
+      }
+    }
+  }
+  
+}
+.reachH3{
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+.modalBtn{
+  padding: .75em 0;
+  display: flex;
+  justify-content: space-between;
+
+  button{
+    padding: .75em 0;
+    width: 45%;
+    font-size: 15px;
+    border-radius: 30px;
+    color:#fff;
+    background: linear-gradient(to left, #1E1FB5, #6064E0);
+
+    &.btnCan{
+      background: #EFEFFC;
+      color: #6567E5;
+    }
+  }
+}

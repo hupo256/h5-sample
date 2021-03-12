@@ -1,0 +1,53 @@
+.thisPoints{
+  padding:0 5px;
+  height:20px;
+  background: url(@static/integration_points.png) rgba(255,242,237,1) no-repeat right 5px center;
+  background-size:12px 20px;
+  border-radius:10px 10px 10px 2px;
+  display: flex;
+  align-items: center;
+  // text-align-last: left !important;
+  span{
+    display:inline-block;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: rgba(255, 116, 83, 1);
+    font-size: 9px;
+    line-height: 1;
+    padding: 3px 12px 3px 3px;
+  }
+  // img{
+  //     display:inline-block !important;
+  //     width:12px;height:20px;
+  //     margin:0 !important;
+  //     vertical-align: middle;
+  // }
+}
+.thisPointsTwo{
+  padding:0 5px;
+  height:20px;
+  background: url(@static/integration_points.png)  no-repeat right 5px center;
+  background-size:12px 20px;
+  border-radius:10px 10px 10px 2px;
+  display: flex;
+  align-items: center;
+  // text-align-last: left !important;
+  span{
+    display:inline-block;
+    font-weight: 400;
+    box-sizing: border-box;
+    color: rgba(255, 116, 83, 1);
+    font-size: 9px;
+    line-height: 1;
+  }
+  .bonus_color{
+    color: #BFBFC8;
+    padding-right: 12px;
+  }
+  // img{
+  //     display:inline-block !important;
+  //     width:12px;height:20px;
+  //     margin:0 !important;
+  //     vertical-align: middle;
+  // }
+}

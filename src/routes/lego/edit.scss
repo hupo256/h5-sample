@@ -1,0 +1,248 @@
+$HighFontColor: #38395B;
+$grayColor: rgba(56, 57, 91, 0.6);
+$grayPlace: rgba(56, 57, 91, 0.4);
+
+.editOrder{
+  min-height: 100vh;
+  font-size: 14px;
+  background:  #ffddd5 url(@static/alreadybg.png) no-repeat 0 0;
+  background-size: 100% auto;
+  padding-top: 100px;
+  z-index: 50;
+  position: relative;
+
+  .foot {
+    line-height: 49px;
+    border-radius: 0;
+    font-size: 15px;
+    width: 100%;
+    height: 49px;
+    // height: 100%;
+    color: #fff;
+    background: #F25E5E;
+    display: block;
+  }
+}
+
+
+.edittop{
+  box-sizing: border-box;
+  padding-bottom: 70px;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling:touch;
+  ::-webkit-scrollbar {
+      display: none;
+  }
+  
+  .formtit{
+    height: 30px;
+    background: url(@static/three.png) no-repeat;
+    background-size: 100% auto;
+    position: relative;
+    z-index: 3;
+  }
+  .inforBox{
+    padding-left:16px;
+    padding-right: 16px;
+    
+   
+    .dateBox{
+      padding: 40px 20px 20px 20px;
+      background-color: #fff;
+      border-bottom: 3px dotted #FFD5D1;
+    }
+    .upImgBox{
+      padding: 40px 20px 20px 20px;
+      background-color: #fff;
+      border-bottom: 3px dotted #FFD5D1;
+    }
+    .editaddress{
+      padding: 40px 20px 20px 20px;
+      background-color: #fff;
+      border-bottom: 3px dotted #FFDDD5;
+      :global{
+        .from{
+          padding: 0;
+        }
+      }
+    }
+
+    h3{
+      font-size: 16px;
+      color: $HighFontColor;
+      line-height: 1.8;
+      background: #fff;
+      z-index: 7;
+      font-weight: 600;
+    }
+  
+    .upBox{
+      padding: 10px 0;
+      padding-bottom: 0!important;
+  
+      img{
+        width: 60px;
+      }
+    }
+  }
+
+}
+
+.sucBox{
+  min-height: 100vh;
+  background:#FEFAF4;
+  position: relative;
+
+  .sucbottom{
+   line-height: 49px;
+   font-size: 16px;
+   width: 100%;
+   height: 49px;
+   color: #fff;
+   background: #F25E5E;
+  }
+
+ .suctxt{
+   width: 100%;
+   position: absolute;
+   top:60%;
+   left:0;
+   color:#FF5464;
+   font-size: 20px;
+   text-align: center;
+ }
+ .babybg{
+   position: absolute;
+   top:403px;
+   left:0;
+   padding-left: 26px;
+   padding-right: 26px;
+   .babyback{
+     display: inline-block;
+     border-radius: 10px;
+     box-shadow: 0 0 10px rgba(0,0,0, .14);
+   }
+ }
+
+ .sucImg{
+   position: relative;
+   .sucbg{
+      display: block;
+      z-index: 1000;
+      position: absolute;
+      top:0;
+      left:0;
+   } 
+   .sucinner{
+     position: absolute;
+     top:15px;
+     
+     img{
+       width: 102px;
+     }
+   }
+
+   .ruleTit{
+     color:#FB5F6E;
+     padding: 5px 0 0 10px;
+     display: flex;
+     align-items : center; 
+
+     img{
+       width: 14px;
+       margin-right: .1rem;
+     }
+     span{
+       font-size: 12px;
+     }
+   }
+  
+ }
+
+ h2{
+   color:$HighFontColor;
+   font-size: 20px;
+   font-weight: 700;
+   margin: 20px 10px 30px;
+ }
+
+ .btnbox{
+   padding-top: 30px;
+   padding-bottom: 10px;
+   
+   button{
+     background: linear-gradient(to left, #6064E0, #1E1FB5);
+     box-shadow: none;
+   }
+ }
+}
+
+
+.sharebox,
+.adbox{
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0, .7);
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 301;
+
+  >img{
+    width: 75%;
+    position: absolute;
+    right: 7%;
+    top: 2%;
+  }
+}
+
+.fccc{
+  color: $grayColor;
+  font-size: 12px;
+}
+
+button[disabled]{
+  background: #ABACB9!important;
+  color:#fff;
+}
+
+:global{
+  .am-picker{
+    margin: 30px 0 20px;
+    height: 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .am-picker-col-item-selected{
+    font-size: 20px;
+    color: #FB5F6E;
+    font-weight: 600;
+  }
+
+  .am-image-picker-list .am-image-picker-upload-btn{
+    border: none;
+    border-radius: 4px;
+    background: #FFF6F7;
+  }
+
+  .am-image-picker-list .am-image-picker-upload-btn:after, 
+  .am-image-picker-list .am-image-picker-upload-btn:before{
+    background-color:#FB5F6E;
+  }
+
+  .from{
+    padding: 0 15px;
+
+    li{
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+ .src-routes-mkt-mkt-sucBox .src-routes-mkt-mkt-sucbottom {
+    border-radius: 0!important;
+  }
+  .am-button-primary:before{
+    border:none!important;
+  }
+}

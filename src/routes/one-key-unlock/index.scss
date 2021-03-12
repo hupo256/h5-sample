@@ -1,0 +1,243 @@
+$v: 3.75;
+.pageStyle{
+  width:100%;height:100vh;
+  position: relative;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+.noscroll{
+  overflow: hidden !important;
+}
+.userInfoBox {
+  padding-left: 20vw / $v;
+  display: flex;
+  align-items: center;
+  width: 260vw / $v;
+  height: 54vw / $v;
+  > div {
+    width: 32vw / $v;
+    height: 32vw / $v;
+    border-radius: 50%;
+    box-sizing: border-box;
+    margin-right: 7vw / $v;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  > p {
+    color: #38395b;
+    font-size: 15vw / $v;
+    line-height: 21vw / $v;
+    font-weight: 600;
+    margin-right: 5vw / $v;
+  }
+  > img {
+    width: 14vw / $v;
+    height: 14vw / $v;
+  }
+  > s {
+    border-top: 7vw / $v solid #38395b;
+    border-left: 5vw / $v solid #fff;
+    border-right: 5vw / $v solid #fff;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+}
+.sdWrap{
+  width: 172px;
+  height: 25px;
+  margin: 0 auto;
+  margin-top: 21px;
+  img{
+    width: 100%;
+  }
+}
+.sddImg{
+  width: 339px;
+  height: 140px;
+  margin: 0 auto;
+  margin-top: 25px;
+  img{
+    width: 100%;
+  }
+}
+.sdWrap2{
+  width: 317px;
+  height: 25px;
+  margin: 0 auto;
+  margin-top: 42px;
+  img{
+    width: 100%;
+  }
+}
+.unlockTips{
+  width: 100%;
+  color: #88889D;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+}
+.unlockBG{
+  width: 335px;
+  margin: 0 auto;
+  background: #FFEEE7;
+  border-radius: 10px;
+  margin-top: 21px;
+  padding: 22px 16px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.items{
+  width: 94px;
+  height: 128px;
+  background: #fff;
+  float: left;
+  border-radius: 9px;
+  margin-right: 8px;
+  overflow: hidden;
+  position: relative;
+  img{
+    width: 100%;
+    height: 83px;
+  }
+  p{
+    padding:0 9px;
+    box-sizing: border-box;
+    height: 28px;
+    color: #38395B;
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .lock{
+    width: 100%;
+    height: 83px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+    img{
+      width: 18px;
+      height: 21px;
+      margin: 0 auto;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 32px;
+    }
+  }
+}
+.unlockBG >div:nth-of-type(3n){
+  margin-right: 0;
+  margin-bottom: 9px;
+}
+.bottomBtn{
+  width: 100%;
+  height: 61px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow:0px 0px 9px 0px rgba(0,0,0,0.07);
+}
+.btn_con{
+  width: 335px;
+  height: 42px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto 0;
+  .btnOne{
+    width:162px;
+    height:40px;
+    background:rgba(255,238,235,1);
+    border-radius:22px;
+    font-size:16px;
+    font-weight:600;
+    color:rgba(255,110,90,1);
+    line-height:40px;
+    text-align: center;
+    span{
+      font-size:12px;
+    }
+
+  }
+  .btnTwo{
+    width:162px;
+    height:40px;
+    background:linear-gradient(90deg,rgba(255,139,74,1) 0%,rgba(255,110,90,1) 100%);
+    border-radius:22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    h1{
+      font-weight:600;
+      font-size:16px;
+      color:rgba(255,255,255,1);
+      line-height:16px;
+      margin: 0 auto;
+      padding: 0;
+      span{
+        font-size:12px;
+      }
+    }
+    p{
+      margin-top: 2px;
+      font-size:10px;
+      font-weight:600;
+      color:rgba(255,226,222,1);
+      line-height:10px;
+      
+    }
+  }
+}
+.btn{
+  width:335px;
+  height:40px;
+  background:linear-gradient(90deg,rgba(255,139,74,1) 0%,rgba(255,110,90,1) 100%);
+  border-radius:22px;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight:600;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 10px;
+  span{
+    font-size:12px;
+  }
+}
+.unlockAllBtn{
+  width: 335px;
+  height: 40px;
+  background: #C3C3CD;
+  border-radius: 22px;
+  margin: 0 auto;
+  margin-top: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight:600;
+  span{
+    font-size:12px;
+  }
+}
+.zw{
+  width: 100%;
+  height: 90px;
+}

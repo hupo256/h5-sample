@@ -1,0 +1,128 @@
+$family1:PingFangSC-Medium;
+$family2:DINAlternate-Bold;
+.family{
+    padding:21px 0 29px;
+    .mine{
+        padding:0 20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        p{
+            height:25px;line-height:25px;
+            font-size:18px;
+            font-family:$family1;
+            color:rgba(56,57,91,1);
+        }
+        div{
+            display:flex;
+            align-items: center;
+            height:20px; line-height:20px;
+            font-size:14px;
+            color:rgba(60,63,201,1);
+            img{
+                width:15px;height:15px;
+                margin-right:7px;
+            }
+        }
+    }
+    .linkman{
+        margin:28px 0 28px 38px;
+        width: 100%;
+        overflow-x: auto;
+        white-space: nowrap;
+       
+        >div{
+            display: inline-block;
+            white-space: nowrap;
+            text-align: center;
+            width:52px;
+            position: relative;
+            margin-right:50px;
+            img{
+                display: inline-block;
+                width:52px;height:52px;
+            }
+            span{
+                position: absolute;
+                background:rgba(195,196,238,1);
+                border-radius:11px;
+                height:17px; line-height:17px;
+                padding:1px 12px 2px;
+                font-size:12px;
+                font-family:$family1;
+                color:rgba(255,255,255,1);
+                top:45px;left:0;
+            }
+            p{
+                line-height:20px;
+                font-size:14px;
+                color:rgba(56,57,91,1);
+                margin-top:20px;
+            }
+        }
+    
+    }
+   
+    .relatives{
+           margin-top:16px;
+           padding:0 20px;
+        div{
+            padding:18px 0 19px;
+            display: flex;
+            align-items: center;
+            border-bottom:1px solid #E1E1E6;
+            background: url(@static/healthRecords/more.png) no-repeat right;
+            background-size:5.76px 10.56px;
+            img{
+                width:38px;height:38px;
+            }
+            span{
+                line-height:20px;
+                font-size:14px;
+                color:rgba(56,57,91,1);
+                margin-left:10px;
+            }
+        }
+        div:nth-of-type(1){
+            border-top:1px solid #E1E1E6;
+        }
+    }
+    .more{
+        padding:0 20px;
+        >p{
+            height:20px; line-height:20px;
+            font-size:14px;
+            color:rgba(136,136,157,1);
+            margin:30px 0 25px;
+            text-align: center;
+        }
+        .friends{
+            width:100%;height: auto;
+            display:flex;
+            flex-flow: row wrap;
+            align-content: flex-start;
+            div{
+                box-sizing: border-box;
+                flex: 0 0 calc(33.33% - 8px);
+                line-height:20px;
+                padding:9px 0;
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                background:#eee;
+                border-radius:19px;
+                margin-bottom:14px;
+                margin-right:12px;
+                font-size:14px;
+                color:rgba(136,136,157,1);
+                img{
+                    width:10px;height:10px;
+                    margin-right:5px;
+                }
+            }
+            div:nth-of-type(3n){
+                margin-right:0 !important;
+            }
+        }
+    }
+}

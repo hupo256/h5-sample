@@ -1,0 +1,101 @@
+@import "../../reportHome.scss";
+$v: 1vw/3.75;
+.category {
+  margin-top: 16 * $v;
+}
+.navbar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  margin-left: 12 * $v;
+  align-items: baseline;
+  > div {
+    color: rgba($color: #38395b, $alpha: 0.5);
+    white-space: nowrap;
+    padding: 8 * $v;
+    font-size: 14 * $v;
+    line-height: 14 * $v;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    > img {
+      width: 14 * $v;
+      height: 4 * $v;
+      margin-top: 10 * $v;
+    }
+  }
+  > .hoverNav {
+    color: #38395b;
+    font-size: 16 * $v;
+    line-height: 16 * $v;
+    font-weight: 500;
+  }
+}
+.scroll {
+  height: 25 * $v;
+}
+.resultList {
+  @include card();
+  color: #38395b;
+  > div:first-child {
+    padding: 16 * $v;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > p {
+      font-size: 20 * $v;
+      line-height: 20 * $v;
+      font-weight: 500;
+    }
+    > a {
+      color: #88889d;
+      font-size: 12 * $v;
+      line-height: 12 * $v;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.toright {
+  width: 5 * $v;
+  height: 10 * $v;
+  margin-left: 5 * $v;
+}
+.reportEntry {
+  position: relative;
+  padding: 15 * $v;
+  display: flex;
+  align-items: center;
+  > div {
+    display: flex;
+    > div:first-child {
+      width: 3 * $v;
+      height: 40 * $v;
+      border-radius: 2 * $v;
+      margin-right: 12 * $v;
+    }
+    > div:last-child {
+      > p:first-child {
+        width: 274 * $v;
+        font-size: 16 * $v;
+        line-height: 24 * $v;
+      }
+      > p:last-child {
+        color: #88889d;
+        font-size: 14 * $v;
+        line-height: 14 * $v;
+        margin-top: 5 * $v;
+      }
+    }
+  }
+}
+.reportEntry::before {
+  content: "";
+  height: 1px;
+  background-color: #e0e0e0;
+  position: absolute;
+  width: 305 * $v;
+  top: 0;
+  opacity: 0.3;
+}

@@ -1,0 +1,93 @@
+@import "../../report4_2.scss";
+
+.feedback {
+  @include title();
+  > div:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 30px 0 30px;
+    > div {
+      width: 80px;
+      height: 80px;
+      > div {
+        width: 100%;
+      }
+      > p {
+        font-size: 13px;
+        color: #88889d;
+        display: flex;
+        margin-top: 4px;
+        justify-content: center;
+      }
+    }
+  }
+}
+.feedSubmit {
+  > textarea {
+    width: 306px;
+    background-color: rgba($color: #d8d8d8, $alpha: 0.3);
+    border-radius: 4px;
+    margin: 0 15px 15px 15px;
+    border: none;
+    box-sizing: border-box;
+    padding: 6px 19px;
+    line-height: 19px;
+    color: #38395b;
+    font-size: 13px;
+    height: 34px;
+  }
+  > textarea::placeholder {
+    color: #88889d;
+    font-size: 13px;
+    line-height: 22px;
+  }
+  > div {
+    display: flex;
+    justify-content: center;
+    padding: 15px 14px;
+    >.tagBox {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+  }
+  > img {
+    display: block;
+    width: 305px;
+    margin: 15px auto 0;
+  }
+}
+.tags {
+  height: 26px;
+  padding: 7px 11px;
+  font-size: 12px;
+  line-height: 12px;
+  border: 0.5px solid #cfd0d7;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  color: #88889d;
+}
+.submitText {
+  font-size: 14px;
+  line-height: 26px;
+  color: #88889d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  > div {
+    height: 1px;
+    width: 85px;
+    background-color: #38395b;
+    opacity: 0.14;
+  }
+}
+
+.submitBox {
+  padding: 0 14px;
+}
+.feedPad {
+  height: 30px;
+}

@@ -1,0 +1,49 @@
+.articleCont{
+  width: 100%;
+  .articleItem{
+    width: 345px;
+    margin: 20px auto 0;
+    padding: 14px;
+    box-sizing: border-box;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 8px 0px rgba(224,224,224,0.64);
+    border-radius:5px;
+    display: flex;
+    .articleImg{
+      width: 90px;
+      height: 90px;
+      display: block;
+      margin-right: 15px;
+      background: #eee;
+      border-radius: 4px;
+      border: 0;
+      overflow: hidden;
+    }
+    .articleRight{
+      width: 212px;
+    }
+    .articleName{
+      margin: 0 0 10px;
+      font-size:15PX;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(56,57,91,1);
+      line-height:20PX;
+    }
+    .articleTips{
+      margin-bottom: 15px;
+      .tipItem{
+        margin: 0 4px 5px 0;
+        font-size:10PX;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(18,181,80,1);
+        line-height:10PX;
+        padding: 4px 6px;
+        border-radius:3px;
+        border:0.5PX solid rgba(18,181,80,1);
+        display: inline-block;
+      }
+    }
+  }
+}

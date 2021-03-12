@@ -1,0 +1,99 @@
+@import "../../style.scss";
+$vw: 1vw/3.75;
+.collect {
+  @include title();
+  > div:nth-of-type(2) {
+    height: 0;
+  }
+}
+@mixin choice {
+  width: 105 * $vw;
+  height: 26 * $vw;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  > span {
+    font-size: 12 * $vw;
+    line-height: 12 * $vw;
+    width: 52 * $vw;
+    height: 26 * $vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.phenotype {
+  position: relative;
+  padding: 20 * $vw 0;
+  margin: 0 15 * $vw;
+  border-top: 0.5PX solid #e1e1e1;
+  > div:first-child {
+    font-size: 15 * $vw;
+    line-height: 21 * $vw;
+    color: #38395b;
+    display: flex;
+    justify-content: space-between;
+    > p {
+      max-width: 165 * $vw;
+    }
+    > .choice0 {
+      @include choice();
+      background-image: url(@static/report4_2/choice0.png);
+      > span {
+        color: #6567e5;
+      }
+    }
+    > .choice1 {
+      @include choice();
+      background-image: url(@static/report4_2/choice1.png);
+      > span:first-child {
+        color: #ffffff;
+      }
+      > span:last-child {
+        color: #afb0bd;
+      }
+    }
+    > .choice2 {
+      @include choice();
+      background-image: url(@static/report4_2/choice2.png);
+      > span:first-child {
+        color: #afb0bd;
+      }
+      > span:last-child {
+        color: #ffffff;
+      }
+    }
+  }
+  > section {
+    margin-top: 12 * $vw;
+    border-radius: 6 * $vw;
+    background-color: #eff1fb;
+    padding: 16 * $vw;
+    color: #88889d;
+    font-size: 14 * $vw;
+    line-height: 21 * $vw;
+    > div {
+      > a {
+        position: relative;
+        display: block;
+        left: 11 * $vw;
+        color: #6567e5;
+        max-width: 262 * $vw;
+        margin-top: 8 * $vw;
+      }
+      > a::before {
+        content: "";
+        height: 12 * $vw;
+        width: 12 * $vw;
+        -webkit-transform: scale(0.5, 0.5);
+        transform: scale(0.5, 0.5);
+        background-color: #d2d5df;
+        position: absolute;
+        border-radius: 50%;
+        top: 4 * $vw;
+        left: -14 * $vw;
+      }
+    }
+  }
+}

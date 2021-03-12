@@ -1,0 +1,267 @@
+.infoCont{
+  min-height: 100vh;
+  padding-top: 23px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  .data{
+    width:130px;
+    height:30PX;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 14px 0px rgba(19,93,47,0.36);
+    border-radius:15px;
+    margin: 0 0 0 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:14PX;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(32,151,74,1);
+    line-height:normal;
+    .edit{
+      width: 14px;
+      height: 12px;
+      margin-left: 12px;
+    }
+  }
+  .heightCont{
+    width:346px;
+    height:289px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 16px 0px rgba(19,93,47,0.19);
+    border-radius:10px;
+    margin: 15px auto;
+    position: relative;
+    display: flex;
+    .title{
+      font-size:18PX;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(13,177,92,.5);
+      line-height:18PX;
+      padding: 15px 0 0 16px;
+    }
+    .triangleDown{
+      width: 100%;
+      height: 12px;
+      display: block;
+      margin-bottom: 7px;
+      img{
+        width: 16px;
+        height: 12px;
+        position: relative;
+        left: 50%;
+        margin-left: -8px;
+      }
+    }
+    .overHidden{
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
+      height:289px;
+      width: 130px;
+      position: absolute;
+      right: 0;
+      .maskTop1{
+        position: absolute;
+        height: 60px;
+        width: 130px;
+        z-index: 2;
+        background:linear-gradient(0deg,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+      }
+    }
+    .chizi{
+      position: relative;
+      width: 130px;
+      .long{
+        display: block;
+        width:23px;
+        height:1px;
+        background:rgba(81,181,118,1);
+        margin-bottom: 9px;
+        margin-left: 35px;
+      }
+      .short{
+        display: block;
+        width:15px;
+        height:1px;
+        background:rgba(81,181,118,1);
+        margin-bottom: 9px;
+        margin-left: 43px;
+      }
+      .num{
+        position: absolute;
+        font-size:14PX;
+        font-family:DINAlternate-Bold,DINAlternate;
+        font-weight:bold;
+        color:rgba(32,151,74,1);
+        line-height:14PX;
+        display: block;
+        width: 21px;
+        text-align: right;
+        padding-right: 14px;
+        margin-top: -7px ;
+      }
+      .last{
+      }
+    }
+    .activedWeight{
+      font-size:30PX;
+      font-family:DINAlternate-Bold,DINAlternate;
+      font-weight:bold;
+      color:rgba(32,151,74,1);
+      line-height:35PX;
+      text-align: center;
+    }
+    .heightDetailCont{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .activedHeight{
+        font-size:30PX;
+        font-family:DINAlternate-Bold,DINAlternate;
+        font-weight:bold;
+        color:rgba(32,151,74,1);
+        line-height:30PX;
+        margin-bottom: 10px;
+      }
+      .babyHeight{
+        position: relative;
+      }
+      .line{
+        /*width:181px;*/
+        width:181px;
+        height:0px;
+        border-top: 1PX dashed rgba(255, 195, 28, 1);
+        margin-bottom: 5px;
+      }
+      .triangleLeft{
+        position: absolute;
+        right: -70px;
+        top: -7px;
+        img{
+          width: 11px;
+        }
+      }
+      .head{
+        img{
+          width: 60px;
+          height: 61px;
+          display: block;
+          margin-left: 22px;
+        }
+      }
+      .body{
+        img{
+          width: 45px;
+          height: 93PX;
+          max-height: 140px;
+          min-height: 50px;
+          display: block;
+          margin-left: 32px;
+          margin-top: -3px;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+  .weightCont{
+    width:346px;
+    height:146px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 16px 0px rgba(19,93,47,0.2);
+    border-radius:10px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    .line{
+      width:0px;
+      height:35px;
+      border-left: 1px dashed rgba(255, 195, 28, 1);
+      display: inline-block;
+      left: 50%;
+      position: absolute;
+      top: 54px;
+    }
+    .title{
+      font-size:18PX;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(13,177,92,.5);
+      line-height:18PX;
+      padding: 15px 0 0 16px;
+    }
+    .triangleDown{
+      width: 100%;
+      height: 12px;
+      display: block;
+      margin-bottom: 7px;
+      img{
+        width: 16px;
+        height: 12px;
+        position: relative;
+        left: 50%;
+        margin-left: -8px;
+      }
+    }
+    .overHidden{
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    .chizi{
+      padding: 22px 13px 4px;
+      position: relative;
+      width: 10px;
+      .long{
+        display: inline-block;
+        width:1px;
+        height:21px;
+        background:rgba(81,181,118,1);
+        margin-right: 9px;
+      }
+      .short{
+        display: inline-block;
+        width:1px;
+        height:14px;
+        background:rgba(81,181,118,1);
+        margin-right: 9px;
+      }
+      .num{
+        position: absolute;
+        font-size:14PX;
+        font-family:DINAlternate-Bold,DINAlternate;
+        font-weight:bold;
+        color:rgba(32,151,74,1);
+        line-height:14PX;
+        top: 0;
+      }
+    }
+    .activedWeight{
+      font-size:30PX;
+      font-family:DINAlternate-Bold,DINAlternate;
+      font-weight:bold;
+      color:rgba(32,151,74,1);
+      line-height:35PX;
+      text-align: center;
+    }
+  }
+  .btn{
+    width:330px;
+    height:44PX;
+    background:linear-gradient(225deg,rgba(97,221,121,1) 0%,rgba(25,202,103,1) 100%);
+    box-shadow:0px 4px 8px 0px rgba(48,159,88,0.43);
+    border-radius:22px;
+    font-size:18PX;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    line-height:normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 19px auto;
+  }
+}

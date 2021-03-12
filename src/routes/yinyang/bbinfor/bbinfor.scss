@@ -1,0 +1,117 @@
+$titleFontColor: rgba(56, 57, 91, 1);
+$grayFontColor: rgba(56, 57, 91, 0.6);
+$mainBtnBg: linear-gradient(to right, rgba(102, 107, 232, 1), rgba(70, 24, 170, 1));
+
+.collectbox{
+  padding: 2rem 24px 0;
+  color:$titleFontColor;
+
+  .genderbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 18px;
+
+    >div{
+      padding: 15px 40px;
+      text-align: center;
+      position: relative;
+
+      img {
+        width: 74px;
+        height: 74px;
+        display: block;
+        border-radius: 50px;
+        margin-bottom: 14px;
+      }
+      img:nth-child(2){
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        right: 40px;
+        top: 68px;
+      }
+      span{
+        color:$grayFontColor;
+        font-size: 16px;
+
+        &.on{
+          color:$titleFontColor;
+        }
+      }
+    }
+  }
+
+  .from {
+    padding: 20px 0 50px;
+
+    li{
+      height: 45px;
+      line-height: 45px;
+      background: #F5F5F5;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      padding: 0 20px;
+      position: relative;
+
+      &:after{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 7px;
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        margin-top: -4px;
+        background: url(@static/bindOnly/todown.png) no-repeat;
+        background-size: cover;
+      }
+
+      input{
+        background: transparent;
+      }
+
+      span{
+        font-size: 14px;
+        color: $grayFontColor;
+      }
+
+      .tcr{
+        padding-right: 24px;
+        text-align: right;
+        float: right;
+      }
+    }
+
+    li:nth-child(1){
+      &:after{
+        display: none;
+      }
+    }
+  }
+}
+
+.submitBox{
+  text-align: center;
+}
+
+.warnMsg{
+  font-size: 12px;
+  color: rgba(255, 74, 31, 1);
+  line-height: 3;
+}
+
+.btnBox{
+  button{
+    width: 100%;
+    background: $mainBtnBg;
+    font-size: 16px;
+    padding: .9em;
+    border-radius: 30px;
+    color:#fff;
+  }
+}
+
+button[disabled]{
+  background: rgba(195, 195, 205, 1);
+}

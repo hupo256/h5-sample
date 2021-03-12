@@ -1,0 +1,101 @@
+.instituteCont{
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 18px 0 22px;
+  .title{
+    font-size:22PX;
+    font-family:PingFangSC-Medium,PingFang SC;
+    font-weight:600;
+    color:rgba(3,149,79,1);
+    line-height:22PX;
+    padding-left: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .more{
+      font-size:13PX;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(25,156,93,1);
+      line-height:15PX;
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+      img{
+        width: 6px; 
+        height: 10px;
+        margin-left: 5px;
+      }
+    }
+  }
+  .instituteDetail{
+    margin: 20px auto;
+    width:344px;
+    box-shadow:0px 2px 10px 0px rgba(0,0,0,0.1);
+    border-radius:10px;
+    padding: 20px 14px 24px 15px;
+    box-sizing: border-box;
+    .instituteDesc{
+      font-size:15px;
+      font-family:PingFangSC-Regular,PingFang SC;
+      font-weight:400;
+      color:rgba(96,97,124,1);
+      line-height:22px;
+      margin-bottom: 16PX;
+    }
+    .inputBox{
+      margin-bottom: 16px;
+      position: relative;
+      .inputTitle{
+        font-size:14PX;
+        font-family:PingFangSC-Regular,PingFang SC;
+        font-weight:400;
+        color:rgba(25,156,93,1);
+        line-height:14PX;
+        margin-bottom: 8px;
+      }
+      input{
+        width:100%;
+        height:40PX;
+        border-radius:4px;
+        opacity:0.6;
+        border:1px solid rgba(25,156,93,1);
+        padding: 12px 11px;
+        box-sizing: border-box;
+        font-size: 18PX;
+        text-align: right;
+        color:rgba(25,156,93,1);
+      }
+      input::-webkit-input-placeholder {
+        color:rgba(117,196,158,1);/* placeholder颜色  */
+        font-size: 18PX;/* placeholder字体大小  */
+        text-align: right;/* placeholder位置  */
+      }
+    }
+    .inputsBox{
+      display: flex;
+      .inputBox:last-child{
+        margin-left: 15px;
+      }
+    }
+  }
+  .submitBtn{
+    width:300px;
+    height:44PX;
+    background:linear-gradient(139deg,rgba(75,206,101,1) 0%,rgba(74,206,100,1) 5%,rgba(17,189,92,1) 100%);
+    box-shadow:0px 2px 8px 0px rgba(168,199,200,0.49);
+    border-radius:22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto 0;
+    font-size:15PX;
+    font-family:PingFangSC-Regular,PingFang SC;
+    font-weight:400;
+    color:rgba(255,255,255,1);
+  }
+  .isGray{
+    background:rgba(208,208,208,1);
+    box-shadow:0px 4px 8px 0px rgba(201,201,201,0.43);
+  }
+}

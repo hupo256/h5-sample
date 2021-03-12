@@ -1,0 +1,123 @@
+$family1:PingFangSC-Medium;
+$family2:DINAlternate-Bold;
+.whiteBlock{
+  padding:25px;
+}
+
+.evaluation {
+  padding:0 20px;
+  .title{
+    margin:50px 0 14px;
+    display: flex;
+    align-items: center;
+    img{
+      width:20px;height:18px;
+      margin-right:5px;
+    }
+    span{
+      font-size:16px;
+      font-family:$family1;
+      color:rgba(56,57,91,1);
+      line-height:26px;
+    }
+  }
+  .thisQuestion {
+    position: relative;
+    padding-top: 20px;
+    border: 1px solid rgba($color: #cecece, $alpha: 0.5);
+    border-radius: 6px;
+    .checkBox {
+      display: flex;
+      padding:0 15px;
+      align-items:top;
+      img{
+        width:15px;height:15px;
+        margin:3px 15px 0 0;
+      }
+     .answerDesc {
+        width:275px;line-height: 22px;
+        margin-top: 0;
+        padding-bottom: 20px;
+        color: #60617c;
+        font-size:14px;
+      }
+    }
+    .submitBtn{
+      width:280px;
+      height:22px;line-height:22px;
+      padding:9px 0;
+      background:rgba(101,103,229,1);
+      border-radius:20px;
+      font-size:16px;
+      color:rgba(255,255,255,1);
+      text-align:center;
+      margin:10px auto 30px;
+    }
+    .grey{
+      background:rgba(239,241,251,1);
+      color:#AFB0BD;
+    }
+  }
+}
+.conclusion {
+  position: relative;
+  margin-top:29px;
+  background:rgba(239,241,251,1);
+  z-index: 1;
+  padding:10px 15px 27px;
+  img {
+    position: absolute;
+    top:-19px;left:0;
+    width:100%;height:19px;
+  }
+  h5{
+      height:25px; line-height:25px;
+      font-size:18px;
+      font-family:PingFangSC-Semibold,PingFang SC;
+      color:rgba(56,57,91,1);
+  }
+  >p{
+      line-height:26px;
+      font-size:15px;
+      text-align: justify; //文本两端对齐
+      text-align-last: left; //最后一行左对齐
+      word-break: normal;
+      word-wrap: break-word;
+      margin:7px 0 20px;
+      color:rgba(56,57,91,.8);
+  }
+  .goLook{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    p{
+      height:14px;line-height:14px;
+      padding:7px 18px;
+      background:rgba(255,255,255,1);
+      border-radius:14px;
+      font-size:12px;
+      color:rgba(101,103,229,1);
+    }
+    span{
+      height:14px;line-height:14px;
+      font-size:13px;
+      color:rgba(96,97,124,1);
+    }
+      
+  }
+}
+.againBtn{
+  padding-top:35px;
+  height:18px;line-height:18px;
+  font-size:13px;
+  color:#60617C;
+  text-align: center;
+  span{
+    color:#6567E5;
+  }
+
+}
+.integration{
+  position:absolute;
+  right:25px;top:-25px;
+}
