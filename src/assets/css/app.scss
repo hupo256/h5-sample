@@ -1,39 +1,29 @@
-@import "./normalize.css";
-@import "./reset.scss";
+@import './normalize.css';
+@import './reset.scss';
 @font-face {
-  font-family: "iconfont";
-  src: url("../fonts/iconfont.eot?t=1539085809255"); /* IE9*/
-  src: url("../fonts/iconfont.ttf?t=1539085809255") format("truetype"),
-    /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url("../fonts/iconfont.svg?t=1539085809255#iconfont")
-      format("svg"); /* iOS 4.1- */
+  font-family: 'iconfont';
+  src: url('../fonts/iconfont.eot?t=1539085809255'); /* IE9*/
+  src: url('../fonts/iconfont.ttf?t=1539085809255') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../fonts/iconfont.svg?t=1539085809255#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 @font-face {
-  font-family: "SourceHanSerif-1d9e7edf7620dfc";
-  src: url("//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.gif?r=124534767063");
-  src: url("//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.gif?r=124534767063?#iefix")
-      format("embedded-opentype"),
-    url("//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.png?r=124534767063")
-      format("woff2"),
-    url("//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.bmp?r=124534767063")
-      format("woff"),
-    url("//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.jpg?r=124534767063")
-      format("truetype");
+  font-family: 'SourceHanSerif-1d9e7edf7620dfc';
+  src: url('//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.gif?r=124534767063');
+  src: url('//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.gif?r=124534767063?#iefix') format('embedded-opentype'),
+    url('//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.png?r=124534767063') format('woff2'),
+    url('//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.bmp?r=124534767063') format('woff'),
+    url('//cdn.repository.webfont.com/webfonts/nomal/134652/47752/5df2016ef629d80e381b7377.jpg?r=124534767063') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 .css1d9e7edf7620dfc {
-  font-family: "SourceHanSerif-1d9e7edf7620dfc";
+  font-family: 'SourceHanSerif-1d9e7edf7620dfc';
 }
 
 :global {
   .page {
     min-height: 100vh;
     box-sizing: border-box;
-
-    div{
-      margin-bottom: 0;
-    }
   }
 
   .notScroll {
@@ -114,13 +104,13 @@
     background: #fff;
   }
   .iconfont {
-    font-family: "iconfont" !important;
+    font-family: 'iconfont' !important;
     font-size: 16px;
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
-    color: "#999";
+    color: '#999';
   }
   #root {
     font-size: 12px;
@@ -154,7 +144,7 @@
     position: relative;
     &::before {
       position: absolute;
-      content: "";
+      content: '';
       left: 0;
       top: 0;
       width: 100%;
@@ -185,22 +175,22 @@
   }
 
   // iphone X
-  @media only screen and (device-width: 375px) and (height: 690px) and (-webkit-device-pixel-ratio: 3){ 
-    .foot{
+  @media only screen and (device-width: 375px) and (height: 690px) and (-webkit-device-pixel-ratio: 3) {
+    .foot {
       border-bottom: 68px solid #fff;
     }
   }
 
   // iphone Xp
-  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:3){ 
-    .foot{
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) {
+    .foot {
       border-bottom: 68px solid #fff;
     }
   }
 
   // iphone11
-  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio:2){ 
-    .foot{
+  @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
+    .foot {
       border-bottom: 68px solid #fff;
     }
   }
@@ -286,7 +276,7 @@
   .jt {
     position: relative;
     &:after {
-      content: "";
+      content: '';
       display: block;
       width: 7px;
       height: 12px;
@@ -505,7 +495,7 @@
     display: flex;
   }
   .weui-dialog__ft:after {
-    content: " ";
+    content: ' ';
     position: absolute;
     left: 0;
     top: 0;
@@ -532,7 +522,7 @@
     background-color: #eeeeee;
   }
   .weui-dialog__btn:after {
-    content: " ";
+    content: ' ';
     position: absolute;
     left: 0;
     top: 0;
@@ -738,7 +728,7 @@
     &:after {
       display: block;
       clear: both;
-      content: "";
+      content: '';
       visibility: hidden;
       height: 0;
     }

@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './routes/app'
-import { Provider as MobxProvider } from 'mobx-react';
-import { Provider as KeepAliveProvider } from 'react-keep-alive';
+import { Provider as MobxProvider } from 'mobx-react'
+import { Provider as KeepAliveProvider } from 'react-keep-alive'
 import mobxStore from './stores'
 
 ReactDOM.render(
@@ -11,5 +11,5 @@ ReactDOM.render(
       <App />
     </KeepAliveProvider>
   </MobxProvider>,
-  document.getElementById('root')
+  document.getElementById('root'),
 )

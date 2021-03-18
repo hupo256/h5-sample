@@ -73,6 +73,7 @@
         "classnames": "^2.2.6",
         "clipboard": "^2.0.6",
         "echarts": "^4.1.0",
+        "jquery": "^3.6.0",
         "mobx": "^5.15.4",
         "mobx-react": "^6.2.2",
         "prop-types": "^15.6.1",
