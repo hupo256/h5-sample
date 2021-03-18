@@ -32,6 +32,9 @@ export default function Inst() {
   }
 
   function touchPrize() {
+    luckyApi.query().then((res) => {
+      console.log(res)
+    })
     const list = []
     const { p100 } = imgs
     for (let i = 0; i < prizeLen; i++) {
