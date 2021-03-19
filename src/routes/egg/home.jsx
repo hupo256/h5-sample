@@ -32,9 +32,9 @@ export default function Inst() {
   }
 
   function touchPrize() {
-    luckyApi.query().then((res) => {
-      console.log(res)
-    })
+    // luckyApi.query().then((res) => {
+    //   console.log(res)
+    // })
     const list = []
     const { p100 } = imgs
     for (let i = 0; i < prizeLen; i++) {
@@ -86,7 +86,7 @@ export default function Inst() {
   }
 
   return (
-    <Page title="砸金蛋">
+    <Page title="砸金蛋11">
       <div id="container" className={styles.eggCon}>
         <div className={styles.header}>
           <p className={styles.rules}>规则</p>

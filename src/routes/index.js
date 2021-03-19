@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Router from './router'
+import BaseLayer from './baseLayer'
 
-import Institute from './institute' // 报告相关
+import Home from './egg/home' // 报告相关
 import Egg from './egg' // 报告相关
 
 const routes = () => (
@@ -12,13 +12,12 @@ const routes = () => (
         path="/"
         component={({ match }) => {
           return (
-            <Router>
+            <BaseLayer>
               <React.Fragment>
-                <Route exact path="/xingg" render={() => <Institute />} />
-                {Institute}
+                <Route exact path="/xingg" render={() => <Home />} />
                 {Egg}
               </React.Fragment>
-            </Router>
+            </BaseLayer>
           )
         }}
       />

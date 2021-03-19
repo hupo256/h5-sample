@@ -1,4 +1,4 @@
-import ajaxinstance from './ajaxinstance'
+import ajaxinstance from './index'
 
 const luckyCreate = () => {
   const lucky = {}

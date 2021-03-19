@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import wxconfig from '@src/common/utils/wxconfig'
-import { ua } from '@src/common/app'
+import ua from '@src/common/utils/ua'
 const { isIos, isAndall } = ua
 class Page extends React.Component {
   state = {
     isAndall: isAndall(),
-    title: ''
+    title: '',
   }
   componentDidMount() {
     const { config = true } = this.props
     config && wxconfig()
-    
+
     let { title } = this.props
     this.setDocumentTitle(title)
     document.getElementById('skeleton').style.display = 'none'
@@ -37,18 +37,14 @@ class Page extends React.Component {
     }
   }
   render() {
-    return (
-      <div className={`page ${this.props.class || ''}${this.state.isAndall ? 'andallPage' : ''}`}>
-        {this.props.children}
-      </div>
-    )
+    return <div className={`page ${this.props.class || ''}${this.state.isAndall ? 'andallPage' : ''}`}>{this.props.children}</div>
   }
 }
 
 Page.propTypes = {
   title: PropTypes.string.isRequired,
   config: PropTypes.bool,
-  class: PropTypes.string
+  class: PropTypes.string,
 }
 
 export default Page

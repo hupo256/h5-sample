@@ -1,5 +1,5 @@
-import user from './user'
+import yinyang from './yinyang'
 
 export default {
-  user,
+  yinyang,
 }
