@@ -4,15 +4,7 @@ import styles from './nodata.scss'
 import img from '@images/common/error.png'
 const DefaultLoading = ({ isLoading, error }) => {
   if (isLoading) {
-    return (
-      <div className="loader">
-        <div className="loader-inner ball-scale-ripple-multiple">
-          <div />
-          <div />
-          <div />
-        </div>
-      </div>
-    )
+    return <div>loading ...</div>
   } else if (error) {
     console.log(error)
     return (

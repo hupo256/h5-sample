@@ -12,11 +12,11 @@ const { thePublicPath, sourcemaps, env, staticImgPath, MODULE, imgUrl } = projec
 const isProduction = env === 'production'
 
 const webpackConfig = {
-  entry: ['babel-polyfill', './src/index'],
-  // entry: {
-  //   main: './src/index',
-  //   // common: ['react', 'react-dom', 'react-router-dom', 'mobx', 'antd'],
-  // },
+  // entry: ['babel-polyfill', './src/index'],
+  entry: {
+    main: './src/index',
+    common: ['react', 'react-dom', 'react-router-dom', 'mobx'],
+  },
   output: {
     filename: 'js/[name].[hash:8].js',
     path: resolve(MODULE || 'dist'),
@@ -71,13 +71,7 @@ const webpackConfig = {
             },
           },
           'postcss-loader',
-          {
-            loader: 'less-loader',
-            options: {
-              javascriptEnabled: true,
-              modifyVars: {},
-            },
-          },
+          'less-loader',
         ],
       },
       {
@@ -146,8 +140,7 @@ const webpackConfig = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        // 引入的React的产品版本
-        NODE_ENV: JSON.stringify(env),
+        NODE_ENV: JSON.stringify(env), // 引入的React的产品版本
       },
       IS_ENV: JSON.stringify(env),
     }),
