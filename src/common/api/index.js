@@ -5,9 +5,8 @@ import UA from '../utils/ua'
 import fun from '@src/common/utils'
 
 const { isAndall } = UA
-const { getSession, isTheAppVersion } = fun
+const { getSession } = fun
 const { host } = config
-const APPVersion = '5.7.9'
 
 // 获取token
 const getToken = () => {
@@ -30,17 +29,13 @@ const ajaxinstance = axios.create({
   timeout: 20000,
   data: {},
   headers: {
-    responseType: 'json'
-  }
+    responseType: 'json',
+  },
 })
 
 // 请求拦截器
 ajaxinstance.interceptors.request.use(
-  request => {
-    if (isTheAppVersion(APPVersion)) {  // 如果是在app目标版内则做个拦截，
-      request.params.inAndall = 1  // 顺便做个记号，为响应信息作准备
-      return Promise.reject(request)  // 给出reject，取消请求
-    }
+  (request) => {
     const token = getToken()
     const { params = {} } = request
     if (!params.noloading) Toast.loading('加载中...', 20)
@@ -48,15 +43,15 @@ ajaxinstance.interceptors.request.use(
     request.headers['pageInfo'] = JSON.stringify(getSession('pageInfo'))
     return request
   },
-  error => {
+  (error) => {
     Toast.hide()
     console.log(error)
-  }
+  },
 )
 
 // 响应拦截器
 ajaxinstance.interceptors.response.use(
-  response => {
+  (response) => {
     const { config, data } = response
     const { code, result, msg } = data
     Toast.hide()
@@ -69,7 +64,7 @@ ajaxinstance.interceptors.response.use(
         if (isAndall()) {
           window.localStorage.setItem('token', '')
           if (!params.withoutBack) andall.invoke('back')
-          andall.invoke('login', {}, res => {
+          andall.invoke('login', {}, (res) => {
             window.localStorage.setItem('token', res.result.token)
             window.location.reload()
           })
@@ -78,20 +73,21 @@ ajaxinstance.interceptors.response.use(
     }
     return { data: result, code, msg }
   },
-  async error => {
+  async (error) => {
     Toast.hide()
     const { params } = error
     if (params && params.inAndall) {
-      return await new Promise(resolve => {  // 返回Promise对象，以便等待APP数据
+      return await new Promise((resolve) => {
+        // 返回Promise对象，以便等待APP数据
         let pageInfo = getSession('pageInfo')
-        andall.invoke('touchPageId', pageInfo, res => {
+        andall.invoke('touchPageId', pageInfo, (res) => {
           resolve({ data: res, code: 0, msg: 'ok' })
         })
-      });
+      })
     }
 
     return console.log(error)
-  }
+  },
 )
 
 export default ajaxinstance

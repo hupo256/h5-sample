@@ -1,7 +1,7 @@
 import React from 'react'
 import Loadable from 'react-loadable'
 import styles from './nodata.scss'
-import img from '@static/error.png'
+import img from '@images/common/error.png'
 const DefaultLoading = ({ isLoading, error }) => {
   if (isLoading) {
     return (
