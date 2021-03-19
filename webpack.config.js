@@ -12,7 +12,7 @@ const { thePublicPath, sourcemaps, env, staticImgPath, MODULE, imgUrl } = projec
 const isProduction = env === 'production'
 
 const webpackConfig = {
-  // entry: ['babel-polyfill', './src/index'],
+  mode: isProduction ? 'production' : 'development',
   entry: {
     main: './src/index',
     common: ['react', 'react-dom', 'react-router-dom', 'mobx'],
@@ -41,11 +41,12 @@ const webpackConfig = {
       {
         test: /\.(c|sa|sc)ss$/,
         use: [
-          // 'css-hot-loader', // css热更新插件，支持对提取css的热更新
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: '../' },
-          },
+          isProduction
+            ? {
+                loader: MiniCssExtractPlugin.loader,
+                options: { publicPath: '../' },
+              }
+            : 'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -152,6 +153,8 @@ const webpackConfig = {
     port: 8081,
     historyApiFallback: true,
     contentBase: './static',
+    hotOnly: true,
+    inline: true,
   },
 }
 
