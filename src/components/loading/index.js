@@ -1,11 +1,12 @@
 import React from 'react'
-import styles from '@src/components/nodata/nodata.scss'
+import Loadable from 'react-loadable'
+import styles from './nodata.scss'
 import img from '@static/error.png'
-const Loading = ({ isLoading, error }) => {
+const DefaultLoading = ({ isLoading, error }) => {
   if (isLoading) {
     return (
-      <div className='loader'>
-        <div className='loader-inner ball-scale-ripple-multiple'>
+      <div className="loader">
+        <div className="loader-inner ball-scale-ripple-multiple">
           <div />
           <div />
           <div />
@@ -19,9 +20,14 @@ const Loading = ({ isLoading, error }) => {
         <img className={styles.noImg} src={img} />
         <p>页面异常了啊！刷新试试</p>
         <div className={styles.nobtn}>
-          <button className='btn' onClick={() => {
-            window.location.reload()
-          }}>刷新</button>
+          <button
+            className="btn"
+            onClick={() => {
+              window.location.reload()
+            }}
+          >
+            刷新
+          </button>
         </div>
       </div>
     )
@@ -30,4 +36,9 @@ const Loading = ({ isLoading, error }) => {
   }
 }
 
-export default Loading
+export default (loader, loading = DefaultLoading) => {
+  return Loadable({
+    loader,
+    loading,
+  })
+}

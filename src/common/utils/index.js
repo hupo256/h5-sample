@@ -1,4 +1,3 @@
-// import addressData from '@src/assets/json/city.json'
 const fun = {}
 
 // 获取url参数

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route } from 'react-router-dom'
-import Loadable from '@src/components/loading/Loadable'
+import Loadable from '@src/components/loading/index'
 
 const Egg = Loadable(() => import('./home'))
 
