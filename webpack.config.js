@@ -17,6 +17,12 @@ const webpackConfig = {
   //   main: './src/index',
   //   // common: ['react', 'react-dom', 'react-router-dom', 'mobx', 'antd'],
   // },
+  output: {
+    filename: 'js/[name].[hash:8].js',
+    path: resolve(MODULE || 'dist'),
+    publicPath: thePublicPath,
+    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  },
   resolve: {
     alias: {
       '@src': resolve('./src'),
@@ -24,12 +30,6 @@ const webpackConfig = {
       '@images': resolve('./static'),
     },
     extensions: ['.js', '.jsx', '.scss', '.less'],
-  },
-  output: {
-    filename: 'js/[name].[hash:8].js',
-    path: resolve(MODULE || 'dist'),
-    publicPath: thePublicPath,
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
   module: {
     rules: [
