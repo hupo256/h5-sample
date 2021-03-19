@@ -13,13 +13,17 @@ const isProduction = env === 'production'
 
 const webpackConfig = {
   entry: ['babel-polyfill', './src/index'],
+  // entry: {
+  //   main: './src/index',
+  //   // common: ['react', 'react-dom', 'react-router-dom', 'mobx', 'antd'],
+  // },
   resolve: {
     alias: {
       '@src': resolve('./src'),
       '@static': resolve('./static/sample'),
       '@images': resolve('./static'),
     },
-    extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.less'],
+    extensions: ['.js', '.jsx', '.scss', '.less'],
   },
   output: {
     filename: 'js/[name].[hash:8].js',
@@ -35,9 +39,9 @@ const webpackConfig = {
         loader: 'babel-loader?cacheDirectory=true',
       },
       {
-        test: /\.(sa|sc)ss$/,
+        test: /\.(c|sa|sc)ss$/,
         use: [
-          'css-hot-loader', // css热更新插件，支持对提取css的热更新
+          // 'css-hot-loader', // css热更新插件，支持对提取css的热更新
           {
             loader: MiniCssExtractPlugin.loader,
             options: { publicPath: '../' },
@@ -48,29 +52,11 @@ const webpackConfig = {
               modules: true,
               importLoaders: 1,
               sourceMap: sourcemaps,
-              minimize: true,
               localIdentName: isProduction ? 'H[hash:base64:6]' : '[path][name]-[local]',
             },
           },
           'postcss-loader',
           'sass-loader',
-        ],
-      },
-      {
-        test: /\.css$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: { publicPath: '../' },
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 1,
-              sourceMap: sourcemaps,
-              minimize: true,
-            },
-          },
         ],
       },
       {
@@ -82,7 +68,6 @@ const webpackConfig = {
             options: {
               importLoaders: 1,
               sourceMap: sourcemaps,
-              minimize: true,
             },
           },
           'postcss-loader',
@@ -162,7 +147,6 @@ const webpackConfig = {
     new webpack.DefinePlugin({
       'process.env': {
         // 引入的React的产品版本
-        // 'NODE_ENV': '"production"',
         NODE_ENV: JSON.stringify(env),
       },
       IS_ENV: JSON.stringify(env),
