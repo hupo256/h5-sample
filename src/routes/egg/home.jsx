@@ -35,6 +35,10 @@ export default function Inst() {
     // luckyApi.query().then((res) => {
     //   console.log(res)
     // })
+    luckyApi.items().then((res) => {
+      console.log(res)
+    })
+    console.log(44)
     const list = []
     const { p100 } = imgs
     for (let i = 0; i < prizeLen; i++) {
