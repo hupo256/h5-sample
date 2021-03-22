@@ -4,6 +4,7 @@ import BaseLayer from './baseLayer'
 
 import Home from './egg/home' // 报告相关
 import Egg from './egg' // 报告相关
+import TodoItem from './todoItem' // 报告相关
 
 const routes = () => (
   <BrowserRouter basename="/mkt/">
@@ -16,6 +17,7 @@ const routes = () => (
               <React.Fragment>
                 <Route exact path="/xingg" render={() => <Home />} />
                 {Egg}
+                {TodoItem}
               </React.Fragment>
             </BaseLayer>
           )

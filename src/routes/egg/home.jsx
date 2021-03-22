@@ -68,10 +68,10 @@ export default function Inst() {
 
       $('#hammer').addClass('hit')
 
-      const params = { activityId: 1, openId: 'sdad' }
-      luckyApi.lottery(params).then((res) => {
-        console.log(res)
-      })
+      // const params = { activityId: 1, openId: 'sdad' }
+      // luckyApi.lottery(params).then((res) => {
+      //   console.log(res)
+      // })
 
       setTimeout(function () {
         $this.find('img:eq(0)').prop('src', imgs.BrokenEgg).addClass('broken')

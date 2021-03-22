@@ -39,6 +39,11 @@ const webpackConfig = {
         loader: 'babel-loader?cacheDirectory=true',
       },
       {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        loaders: ['babel-loader?cacheDirectory', 'ts-loader'],
+      },
+      {
         test: /\.(c|sa|sc)ss$/,
         use: [
           isProduction

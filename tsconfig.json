@@ -1,5 +1,20 @@
+
+
 {
   "compilerOptions": {
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "declaration": false,
+    "removeComments": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "strict": true,
+    "lib": ["es6", "es7", "dom"],
     "baseUrl": ".",
     "paths": {
       "@src/*": [
@@ -9,17 +24,9 @@
         "./static/images/*"
       ]
     },
+    "noImplicitAny": false,
     "outDir": "./dist/",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "es6",
-    "target": "es5",
-    "jsx": "react",
-    "allowJs": true,
-    "experimentalDecorators": true
+    "allowSyntheticDefaultImports": true
   },
-  "include": [
-    "./src/**/*",
-    "./static/**/*", "src/routes/mkt/mobx/.js"
-  ]
+  "exclude": ["dist", "node_modules"]
 }
