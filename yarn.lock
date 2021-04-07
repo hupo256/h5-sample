@@ -4753,6 +4753,11 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
+lucky-canvas@^1.5.2:
+  version "1.5.3"
+  resolved "https://registry.yarnpkg.com/lucky-canvas/-/lucky-canvas-1.5.3.tgz#3abdd88aa59508263862314b616e32ae209c9280"
+  integrity sha512-XMljlj2mUno8DqFUPpsR6E2+mD4AhbL2pzg3zeXeH8e/8b+ZxhGkzn6hajvAYuaGJ9iZU3qjP27STNKUVdUkzw==
+
 make-dir@^2.0.0, make-dir@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-2.1.0.tgz#5f0310e18b8be898cc07009295a30ae41e91e6f5"
@@ -6583,6 +6588,13 @@ react-loadable@^5.4.0:
   integrity sha512-C8Aui0ZpMd4KokxRdVAm2bQtI03k2RMRNzOB+IipV3yxFTSVICv7WoUr5L9ALB5BmKO1iHgZtWM8EvYG83otdg==
   dependencies:
     prop-types "^15.5.0"
+
+react-luck-draw@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-luck-draw/-/react-luck-draw-1.0.1.tgz#810c5e943af35b0cb8b3cf02f9d00814d357a2cd"
+  integrity sha512-9CkjuhD3Ivb3U8WpkiGs45r02MEz5IS+GI0K2DJ1QsJpxxeVIeTUepHrwcyCFywQLCzmt7BRyD7mNwzCBpAJQQ==
+  dependencies:
+    lucky-canvas "^1.5.2"
 
 react-native-swipeout@^2.2.2:
   version "2.3.6"
