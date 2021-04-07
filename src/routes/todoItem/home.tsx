@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Page from '@src/components/page/index'
+import PromiseRender from './PromiseRender'
 import styles from './style.scss'
 // import { TodoTextInput } from '../TodoTextInput';
 
@@ -23,6 +24,7 @@ export default function TodoItem(props: Props) {
       <div className={styles.tsbox}>
         <button onClick={countEmite}>click me</button>
         <p>this is my father's world X {count}</p>
+        <PromiseRender />
       </div>
     </Page>
   )
