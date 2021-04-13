@@ -3,20 +3,19 @@ import ajaxinstance from './index'
 const luckyCreate = () => {
   const lucky = {}
 
-  // 用户信息
-  lucky.query = (params) => {
-    return ajaxinstance.get('api/v1/saas/activity/query', { params })
+  //查询抽奖活动
+  lucky.info = (params) => {
+    return ajaxinstance.post('api/v1/sso/activity/info', params)
   }
 
-  //专家文章
+  //开始抽奖
   lucky.lottery = (params) => {
-    return ajaxinstance.post('api/v1/saas/activity/lottery', params)
+    return ajaxinstance.post('api/v1/sso/activity/lottery', params)
   }
 
-  //专家文章
-  lucky.items = (params) => {
-    return ajaxinstance.post('https://www.dianrong.com/feapi/items?type=iAboutDR', params)
-    // return ajaxinstance.post('apis/feapi/items?type=iAboutDR', params)
+  //中奖记录
+  lucky.reward = (params) => {
+    return ajaxinstance.post('api/v1/sso/activity/reward', params)
   }
 
   return lucky

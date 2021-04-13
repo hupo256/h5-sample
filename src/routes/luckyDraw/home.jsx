@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
+import Page from '@src/components/page/index'
 import { LuckyWheel, LuckyGrid } from 'react-luck-draw'
-import imgs from './images'
+import luckyApi from '@src/common/api/luckyApi'
 import styles from './luckyDraw.scss'
 // import styles from './luckyDraw.less'
 
@@ -9,17 +10,22 @@ export default function Lucky({ props }) {
   const myWheel = useRef()
   const myGrid = useRef()
 
-  useEffect(() => {}, [])
+  useEffect(() => {
+    const param = { activityCode: 'AC210412000011', noloading: 1 }
+    luckyApi.info(param).then((res) => {
+      console.log(res)
+    })
+  }, [])
 
   const Wconfig = {
     blocks: [{ padding: '13px', background: '#d64737' }],
     prizes: [
-      { title: '1元红包', background: '#f9e3bb', fonts: [{ text: '1元红包', top: '18%' }] },
-      { title: '100元红包', background: '#f8d384', fonts: [{ text: '100元红包', top: '18%' }] },
-      { title: '0.5元红包', background: '#f9e3bb', fonts: [{ text: '0.5元红包', top: '18%' }] },
-      { title: '2元红包', background: '#f8d384', fonts: [{ text: '2元红包', top: '18%' }] },
-      { title: '10元红包', background: '#f9e3bb', fonts: [{ text: '10元红包', top: '18%' }] },
-      { title: '50元红包', background: '#f8d384', fonts: [{ text: '50元红包', top: '18%' }] },
+      { background: '#f9e3bb', fonts: [{ text: '1元红包WW', top: '18%' }] },
+      { background: '#f8d384', fonts: [{ text: '100元红包', top: '18%' }] },
+      { background: '#f9e3bb', fonts: [{ text: '0.5元红包', top: '18%' }] },
+      { background: '#f8d384', fonts: [{ text: '2元红包', top: '18%' }] },
+      { background: '#f9e3bb', fonts: [{ text: '10元红包', top: '18%' }] },
+      { background: '#f8d384', fonts: [{ text: '50元红包', top: '18%' }] },
     ],
     buttons: [
       { radius: '50px', background: '#d64737' },
@@ -107,59 +113,61 @@ export default function Lucky({ props }) {
   }
 
   return (
-    <div className={styles.luckybox}>
-      <div className={styles.btn}>click me</div>
-      <LuckyWheel
-        ref={myWheel}
-        width="300px"
-        height="300px"
-        blocks={Wconfig.blocks}
-        prizes={Wconfig.prizes}
-        buttons={Wconfig.buttons}
-        defaultStyle={Wconfig.defaultStyle}
-        onStart={() => {
-          // 点击抽奖按钮会触发star回调
-          // 调用抽奖组件的play方法开始游戏
-          myWheel.current.play()
-          // 模拟调用接口异步抽奖
-          setTimeout(() => {
-            // 假设拿到后端返回的中奖索引
-            const index = (Math.random() * 6) >> 0
-            // 调用stop停止旋转并传递中奖索引
-            myWheel.current.stop(index)
-          }, 2500)
-        }}
-        onEnd={(prize) => {
-          // 抽奖结束会触发end回调
-          console.log(prize)
-          alert('恭喜获得大奖:' + prize.title)
-        }}
-      />
+    <Page title="大转盘">
+      <div className={styles.luckybox}>
+        {/* <div className={styles.btn}>click me</div> */}
+        <LuckyWheel
+          ref={myWheel}
+          width="300px"
+          height="300px"
+          blocks={Wconfig.blocks}
+          prizes={Wconfig.prizes}
+          buttons={Wconfig.buttons}
+          defaultStyle={Wconfig.defaultStyle}
+          onStart={() => {
+            // 点击抽奖按钮会触发star回调
+            // 调用抽奖组件的play方法开始游戏
+            myWheel.current.play()
+            // 模拟调用接口异步抽奖
+            setTimeout(() => {
+              // 假设拿到后端返回的中奖索引
+              const index = (Math.random() * 6) >> 0
+              // 调用stop停止旋转并传递中奖索引
+              myWheel.current.stop(index)
+            }, 2500)
+          }}
+          onEnd={(prize) => {
+            // 抽奖结束会触发end回调
+            console.log(prize)
+            alert('恭喜获得大奖:' + prize.title)
+          }}
+        />
 
-      <br />
+        <br />
 
-      <LuckyGrid
-        ref={myGrid}
-        width="300px"
-        height="300px"
-        blocks={Gconfig.blocks}
-        prizes={Gconfig.prizes}
-        buttons={Gconfig.buttons}
-        defaultStyle={Gconfig.defaultStyle}
-        onStart={() => {
-          if (!luckyNum) return alert('还剩0次抽奖机会')
-          myGrid.current.play()
-          setTimeout(() => {
-            myGrid.current.stop((Math.random() * 8) >> 0)
-          }, 2000)
-        }}
-        onEnd={(prize) => {
-          alert(`恭喜你获得大奖: ${prize.name}`)
-          luckyNum--
-          console.log(myGrid.current.props)
-          myGrid.current.props.buttons[0].fonts[0].text = `${luckyNum} 次`
-        }}
-      />
-    </div>
+        <LuckyGrid
+          ref={myGrid}
+          width="300px"
+          height="300px"
+          blocks={Gconfig.blocks}
+          prizes={Gconfig.prizes}
+          buttons={Gconfig.buttons}
+          defaultStyle={Gconfig.defaultStyle}
+          onStart={() => {
+            if (!luckyNum) return alert('还剩0次抽奖机会')
+            myGrid.current.play()
+            setTimeout(() => {
+              myGrid.current.stop((Math.random() * 8) >> 0)
+            }, 2000)
+          }}
+          onEnd={(prize) => {
+            alert(`恭喜你获得大奖: ${prize.name}`)
+            luckyNum--
+            console.log(myGrid.current.props)
+            myGrid.current.props.buttons[0].fonts[0].text = `${luckyNum} 次`
+          }}
+        />
+      </div>
+    </Page>
   )
 }

@@ -10,7 +10,7 @@ const hostName = `${port}//${env}wechatshop.dnatime.com`
 // baseHost = '//devapi.dnatime.com'
 
 // 本地环境
-baseHost = '//10.1.4.181:8291/'
+baseHost = '//10.1.4.58:8291/'
 // baseHost = '//10.88.27.196:8093'
 // baseHost ='//10.88.24.137:3000/api/'
 

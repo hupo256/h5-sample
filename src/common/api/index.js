@@ -42,13 +42,14 @@ ajaxinstance.interceptors.request.use(
 // 响应拦截器
 ajaxinstance.interceptors.response.use(
   (response) => {
+    console.log(response)
     const { config, data } = response
-    const { code, result, msg } = data
+    const { code, message } = data
     Toast.hide()
     if (+code) {
       const { params = {} } = config
       if (!params.noloading && !params.withoutBack) {
-        Toast.fail(msg, 2)
+        Toast.fail(message, 2)
       }
       if (+code === 100001) {
         if (isAndall()) {
@@ -61,7 +62,7 @@ ajaxinstance.interceptors.response.use(
         }
       }
     }
-    return { data: result, code, msg }
+    return { data: data.data, code, message }
   },
   async (error) => {
     Toast.hide()

@@ -35,10 +35,9 @@ export default function Inst() {
     // luckyApi.query().then((res) => {
     //   console.log(res)
     // })
-    luckyApi.items().then((res) => {
-      console.log(res)
-    })
-    console.log(44)
+    // luckyApi.items().then((res) => {
+    //   console.log(res)
+    // })
     const list = []
     const { p100 } = imgs
     for (let i = 0; i < prizeLen; i++) {
@@ -90,7 +89,7 @@ export default function Inst() {
   }
 
   return (
-    <Page title="砸金蛋11">
+    <Page title="砸金蛋">
       <div id="container" className={styles.eggCon}>
         <div className={styles.header}>
           <p className={styles.rules}>规则</p>
