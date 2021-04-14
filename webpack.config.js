@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const { ModuleFederationPlugin } = require('webpack').container
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
@@ -9,7 +10,7 @@ const ip = require('ip')
 const resolve = (dir) => path.join(__dirname, dir)
 const project = require('./project.config.js')
 const { thePublicPath, sourcemaps, env, staticImgPath, MODULE, imgUrl } = project
-const isProduction = env === 'production'
+const isProduction = env === 'prod'
 
 const webpackConfig = {
   mode: isProduction ? 'production' : 'development',
@@ -36,13 +37,13 @@ const webpackConfig = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader?cacheDirectory=true',
+        loader: 'babel-loader',
       },
-      {
-        test: /\.(ts|tsx)$/,
-        exclude: /node_modules/,
-        loaders: ['babel-loader?cacheDirectory', 'ts-loader'],
-      },
+      // {
+      //   test: /\.(ts|tsx)$/,
+      //   exclude: /node_modules/,
+      //   loader: ['babel-loader?cacheDirectory', 'ts-loader'],
+      // },
       {
         test: /\.(c|sa|sc)ss$/,
         use: [
@@ -114,7 +115,7 @@ const webpackConfig = {
       maxAsyncRequests: 5,
       maxInitialRequests: 3,
       automaticNameDelimiter: '~',
-      name: true,
+      // name: 'att',
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -145,10 +146,18 @@ const webpackConfig = {
       chunkFilename: 'css/main.[contenthash:5].css',
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify(env), // 引入的React的产品版本
-      },
       IS_ENV: JSON.stringify(env),
+    }),
+    new ModuleFederationPlugin({
+      name: 'h5sample',
+      filename: 'remoteEntry.js',
+      // exposes: {
+      //   './showTex': './src/routes/egg/showTex',
+      // },
+      remotes: {
+        fdTest: 'fdTest@http://localhost:3004/remoteEntry.js',
+      },
+      shared: ['react', 'react-dom', 'react-router-dom'],
     }),
   ],
   devtool: sourcemaps ? 'eval-source-map' : 'source-map',
@@ -159,21 +168,6 @@ const webpackConfig = {
     historyApiFallback: true,
     contentBase: './static',
     inline: true,
-    proxy: [
-      {
-        context: ['/user', '/feapi'], //使用context属性，可以把多个代理到同一个target下
-        target: 'https://www.dianrong.com/', //把用 user 和 apis 开头的接口代理到 https://rsp.jd.com/域名下
-        secure: true, //默认不支持运行在https上，且使用了无效证书的后端服务器，这里设置为true，可以支持
-        changeOrigin: true, //如果接口跨域，需要进行这个参数配置
-        pathRewrite: { '^/apis': '' }, //由于apis开头的路径，是人为添加方便区分哪些接口要代理的，所以这里去掉apis
-        //设置请求头
-        headers: {
-          origin: 'https://www.dianrong.com', //请求接口限制来源，所以要改动请求源
-          host: 'dianrong.com', //设置请求头的host
-          referer: 'https://www.dianrong.com/index', //设置请求头的referer，因为后端接口会有限制
-        },
-      },
-    ],
   },
 }
 

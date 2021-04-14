@@ -1,0 +1,12 @@
+{
+    "code": 200,
+    "message": "this is my _message",
+    "data": {
+        "prizeCode": "ACP210422000072",
+        "prizeName": "二等奖",
+        "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/2@2x.png",
+        "sort": 2,
+        "isPrize": 1,
+        "limit": 5
+    }
+}

@@ -1,0 +1,91 @@
+.luckybox {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #1e1c3b url(http://img.inbase.in-deco.com/crm-saas/img/games/wheel/bg@2x.png) no-repeat 50% -110px;
+  background-size: 145% auto;
+  color: #fff;
+  font-size: 14px;
+
+  &.gridbox {
+    background: rgba(68, 34, 209, 1) url(http://img.inbase.in-deco.com/crm-saas/img/games/gird/bg@2x.png) no-repeat -20px 10px;
+    background-size: 452px auto;
+
+    .gridCanvas {
+      width: 352px;
+      height: 423px;
+      background: url(http://img.inbase.in-deco.com/crm-saas/img/games/gird/body@2x.png) no-repeat;
+      background-size: contain;
+      box-sizing: border-box;
+      position: relative;
+      padding-top: 108px;
+      text-align: center;
+
+      > div,
+      > p {
+        display: inline-block;
+      }
+
+      .counter {
+        position: absolute;
+        bottom: 2.3em;
+        left: 50%;
+        width: 18em;
+        transform: translateX(-50%);
+        background: #680db8;
+        color: #ebdcff;
+        line-height: 2.4;
+        border-radius: 25px;
+      }
+    }
+  }
+
+  .hand {
+    margin-bottom: -61px;
+    width: 61px;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    transform-origin: 90% 90%;
+    transform: translate3D(32px, -150px, 0);
+    animation: handclick 1s ease infinite alternate;
+
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  @keyframes handclick {
+    0%,
+    40%,
+    60%,
+    100% {
+      transform: translate3D(32px, -150px, 0) rotate(0);
+    }
+    20% {
+      transform: translate3D(32px, -150px, 0) rotate(-10deg);
+    }
+  }
+
+  .wheelshadow {
+    width: 100%;
+    margin: -70px 0 -20px;
+  }
+}
+
+.toastCon {
+  font-size: 16px;
+
+  p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 0.5em;
+  }
+}
+
+:global {
+  .am-toast > span {
+    max-width: 75%;
+  }
+}

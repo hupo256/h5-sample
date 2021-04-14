@@ -1,0 +1,79 @@
+.header {
+  width: 100%;
+  text-align: center;
+
+  .timebox {
+    position: relative;
+    height: 50px;
+    p {
+      line-height: 50px;
+      background: rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+    span {
+      position: absolute;
+      top: 10px;
+      right: 0;
+      background: #ed2e4e;
+      // opacity: 0.7;
+      line-height: 1;
+      padding: 0.5em 1em;
+      border-radius: 13px 0 0 13px;
+    }
+  }
+
+  img {
+    width: 98%;
+    padding: 0.2em 0 0.8em;
+  }
+
+  .disc {
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    height: 90px;
+    line-height: 90px;
+    background: url(http://img.inbase.in-deco.com/crm-saas/img/games/wheel/banner@2x.png) no-repeat 50% top;
+    background-size: 95% auto;
+  }
+}
+
+.grid {
+  > img {
+    padding: 1.5em 0 1em;
+    width: 95%;
+  }
+
+  .timebox {
+    span {
+      background: rgba(173, 82, 255, 1);
+    }
+  }
+
+  .disc {
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    height: 29px;
+    line-height: 29px;
+    background: url(http://img.inbase.in-deco.com/crm-saas/img/games/gird/title@2x.png) no-repeat 50% top;
+    background-size: 327px auto;
+  }
+}
+.egg {
+  img {
+    width: 58%;
+    margin: -20px 0 -10px;
+  }
+
+  .disc {
+    font-size: 16px;
+    font-weight: 500;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    height: 30px;
+    line-height: 30px;
+    width: 75%;
+    margin: 0 auto;
+    background: linear-gradient(90deg, rgba(120, 94, 142, 0) 0%, #8b0e17 50%, rgba(119, 93, 140, 0) 100%);
+  }
+}

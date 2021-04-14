@@ -1,0 +1,239 @@
+.luckybox {
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(131, 42, 50, 1) url(http://img.inbase.in-deco.com/crm-saas/img/games/egg/eggbg.png) no-repeat;
+  background-size: contain;
+  color: #fff;
+  font-size: 14px;
+
+  .main {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+
+    > ul {
+      margin-top: -15px;
+    }
+
+    > span {
+      position: absolute;
+      width: 24px;
+      background: rgba(252, 188, 43, 1);
+      font-size: 14px;
+      font-weight: 400;
+      color: #fff;
+      line-height: 20px;
+      text-align: center;
+      padding: 7px 0;
+      left: 0;
+      top: 0;
+    }
+
+    .hammer {
+      position: absolute;
+      left: 280px;
+      top: 50px;
+      z-index: 3;
+      width: 153px;
+      transform-origin: 90% 80%;
+      transition: all 1s ease-in-out 0.2s;
+
+      &.shake {
+        animation: hammer-move 0.5s linear infinite alternate;
+      }
+
+      &.hit {
+        animation: hammer-hit 0.1s alternate;
+      }
+    }
+
+    li {
+      position: relative;
+      height: 310px;
+
+      img {
+        position: absolute;
+        left: 50%;
+      }
+
+      img:nth-child(1) {
+        top: 28px;
+        z-index: 2;
+        margin-left: -91px;
+        width: 189px;
+        transform-origin: 50% 96%;
+      }
+
+      .goldEgg {
+        animation: egg-shake 1s ease infinite alternate;
+      }
+
+      @keyframes egg-shake {
+        0%,
+        20%,
+        40%,
+        100% {
+          transform: rotate(0);
+        }
+        10%,
+        30% {
+          transform: rotate(-3deg);
+        }
+      }
+
+      img:nth-child(2) {
+        top: 15em;
+        width: 332px;
+        transform: translateX(-50%);
+      }
+    }
+
+    .counter {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      z-index: 5;
+    }
+  }
+
+  .rulerbg {
+    padding-top: 1em;
+    width: 92%;
+  }
+  .rulebox {
+    color: #343434;
+    margin: -26px 35px 0;
+    padding: 1.5em;
+    text-align: center;
+    background: #fff;
+    text-align: left;
+    line-height: 1.6;
+    width: 71%;
+    border-radius: 0 0 5px 5px;
+
+    .rule {
+      padding-bottom: 1em;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 65px;
+        height: 8px;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        background: linear-gradient(90deg, rgba(255, 217, 115, 0.7) 0%, rgba(255, 255, 249, 0) 100%);
+      }
+    }
+  }
+
+  .footer {
+    text-align: center;
+    font-weight: 400px;
+    line-height: 2;
+    padding: 2em 0;
+    color: rgba(231, 230, 255, 1);
+  }
+}
+
+.toastCon {
+  font-size: 16px;
+
+  p:nth-child(2) {
+    font-size: 14px;
+    margin-top: 0.75em;
+  }
+}
+
+:global {
+  .am-toast > span {
+    max-width: 75%;
+  }
+}
+
+@keyframes hammer-move {
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@keyframes hammer-hit {
+  100% {
+    transform: rotate(-25deg);
+  }
+}
+
+.popupbox {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 5;
+
+  .popupcon {
+    background: url(https://img.inbase.in-deco.com/crm-saas/img/games/egg/popegg.png) no-repeat 50% 50%;
+    background-size: contain;
+    width: 352px;
+    height: 408px;
+    transform: translate3D(-50%, -50%, 0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    font-size: 14px;
+    color: #ca5c07;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .leftNum {
+      position: absolute;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      bottom: 8em;
+      text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .rescon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      padding-top: 7.7em;
+
+      img {
+        height: 80px;
+        padding: 0.5em 0;
+      }
+      b {
+        font-size: 22px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      background: url(https://img.inbase.in-deco.com/crm-saas/img/games/egg/btn@2x.png) no-repeat;
+      background-size: contain;
+      width: 240px;
+      height: 44px;
+      line-height: 44px;
+      color: #fff;
+      font-size: 18px;
+      margin-top: 3.5em;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "code": 200,
+  "message": "",
+  "data": {
+      "uid": "d9eaa80cbe53442f8e272c809df5f23f",
+      "activityCode": "AC210422000011",
+      "activityType": 2,
+      "activityTitle": "验证小程序幸运跑马灯",
+      "activitySubtitle": "啦幸运跑马灯啦啦啦啦啦啦啦啦啦",
+      "startTime": 1617813200000,
+      "endTime": 1619257565000,
+      "activityJoinType": 1,
+      "activityJoinNum": 6,
+      "activityRule": "QWEFQWRF<br/>ASDF<br/>SDF<br/>SDF",
+      "actvityConvertRule": "QWRERG<br/>WEEsARGWERG<br/>SDFGEGsARRG",
+      "createTime": 1619080420000,
+      "telPhone": "13565676765",
+      "state": 1,
+      "prize": [
+          {
+              "prizeCode": "ACP210422000071",
+              "prizeName": "一等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/1@2x.png",
+              "sort": 1,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000072",
+              "prizeName": "二等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/2@2x.png",
+              "sort": 2,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000073",
+              "prizeName": "三等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/3@2x.png",
+              "sort": 3,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000074",
+              "prizeName": "四等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/4@2x.png",
+              "sort": 4,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000075",
+              "prizeName": "五等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/5@2x.png",
+              "sort": 5,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000076",
+              "prizeName": "谢谢参与",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/6@2x.png",
+              "sort": 6,
+              "isPrize": 0,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000077",
+              "prizeName": "六等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/7@2x.png",
+              "sort": 7,
+              "isPrize": 1,
+              "limit": null
+          },
+          {
+              "prizeCode": "ACP210422000078",
+              "prizeName": "七等奖",
+              "prizeImage": "http://img.inbase.in-deco.com/crm-saas/img/games/prize/8@2x.png",
+              "sort": 8,
+              "isPrize": 1,
+              "limit": null
+          }
+      ]
+  }
+}

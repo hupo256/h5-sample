@@ -42,28 +42,6 @@ fun.getStorage = (key) => {
   return data && data !== 'undefined' ? JSON.parse(data) : ''
 }
 
-// fixScroll ios12.2.2版本滚动
-fun.fixScroll = () => {
-  let t, l, w, h
-  if (document.documentElement && document.documentElement.scrollTop) {
-    t = document.documentElement.scrollTop
-    l = document.documentElement.scrollLeft
-    w = document.documentElement.scrollWidth
-    h = document.documentElement.scrollHeight
-  } else if (document.body) {
-    t = document.body.scrollTop
-    l = document.body.scrollLeft
-    w = document.body.scrollWidth
-    h = document.body.scrollHeight
-  }
-  return {
-    top: t,
-    left: l,
-    width: w,
-    height: h,
-  }
-}
-
 // 系列化参数
 fun.parseQuery = (params = {}) => {
   let url = ''
@@ -71,6 +49,16 @@ fun.parseQuery = (params = {}) => {
     url += `${i}=${params[i]}&`
   }
   return url.substring(0, url.length - 1)
+}
+
+fun.urlParamHash = (url = location.href) => {
+  const obj = {}
+  const hash = url.slice(url.indexOf('?') + 1).split('&')
+  for (let i = 0, k = hash.length; i < k; i++) {
+    const arr = hash[i].split('=')
+    obj[arr[0]] = arr[1]
+  }
+  return obj
 }
 
 // 省市区三级联动数据包装
@@ -115,64 +103,6 @@ fun.numToStringK = (num) => {
   } else {
     return (num / 10000).toFixed(1) + '万'
   }
-}
-
-// 预约专家显示最近n天的工作日时间
-fun.getDayListExport = (num) => {
-  num = num + 2
-  const date = new Date()
-  const curTime = date.getTime()
-  const hours = date.getHours() + 1
-  const dayList = []
-  // const bool = hours >= 17
-  const bool = true
-  // 获取时间段
-  let hoursList = []
-  for (let i = 10; i < 17; i++) {
-    const nowTime = i + ':00-' + (i + 1) + ':00'
-    hoursList.push({ value: nowTime, label: nowTime, bool: hours > i })
-  }
-  // 获取天数
-  for (let i = bool ? 1 : 0; i < (bool ? num + 1 : num); i++) {
-    let date = curTime + i * 3600 * 24 * 1000
-    date = new Date(date)
-    const year = date.getFullYear()
-    const month = date.getMonth() + 1
-    const day = date.getDate()
-    const week = date.getDay()
-    if (week !== 6 && week !== 0) {
-      const time = `${year}-${month}-${day}`
-      dayList.push({
-        value: time,
-        label: time,
-        children: !bool && !i ? hoursList.filter((item) => !item.bool) : hoursList,
-      })
-    }
-  }
-  return dayList.slice(0, num - 2)
-}
-
-// 显示圣诞节，元旦，还是正常（1：圣诞节， 2：元旦， 3：正常）
-fun.returnNumByDay = () => {
-  if (new Date() <= new Date('2019/12/26 00:00:00')) {
-    return 1
-  } else if (new Date('2019/12/26 00:00:00') < new Date() && new Date() <= new Date('2020/01/03 00:00:00')) {
-    return 2
-  } else {
-    return 3
-  }
-}
-
-// 如果当前时间在所设定的日期里，就返回true
-fun.touchTheTimePosition = (start = '2020-01-23', end = '2020-01-30') => {
-  const n = new Date().getTime()
-  const s = new Date(start).getTime()
-  const e = new Date(end).getTime()
-  return n > s && n < e
-}
-// 获取今天的日期
-fun.todayDate = () => {
-  return fun.fmtDate(new Date())
 }
 
 export default {

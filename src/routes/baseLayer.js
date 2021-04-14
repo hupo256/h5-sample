@@ -1,26 +1,22 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect } from 'react'
+import fun from '@src/common/utils'
 
-class Router extends React.Component {
-  state = {
-    bool: false,
-  }
-  componentDidMount() {
-    this.setState({ bool: true })
-  }
+const { urlParamHash, setStorage } = fun
+
+export default function BaseLayer(props) {
+  const [bool, setbool] = useState(false)
+  useEffect(() => {
+    init()
+  }, [])
 
   // 获取初始化数据
-  init = (n) => {
-    this.setState({ bool: true })
+  function init() {
+    const { appId = '' } = urlParamHash()
+    if (appId) {
+      setStorage('appId', appId)
+      setbool(true)
+    }
   }
 
-  render() {
-    const { bool } = this.state
-    return <React.Fragment>{bool ? this.props.children : ''}</React.Fragment>
-  }
+  return <React.Fragment>{bool ? props.children : ''}</React.Fragment>
 }
-Router.propTypes = {
-  children: PropTypes.object,
-}
-
-export default Router

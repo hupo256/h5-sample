@@ -29,8 +29,9 @@ ajaxinstance.interceptors.request.use(
   (request) => {
     const token = getToken()
     const { params = {} } = request
-    if (!params.noloading) Toast.loading('加载中...', 20)
+    // if (!params.noloading) Toast.loading('加载中...', 20)
     token && (request.headers['Token'] = token) // (location.href = '/#/')
+    request.headers['Accept'] = 'application/json'
     return request
   },
   (error) => {
@@ -49,7 +50,7 @@ ajaxinstance.interceptors.response.use(
     if (+code) {
       const { params = {} } = config
       if (!params.noloading && !params.withoutBack) {
-        Toast.fail(message, 2)
+        // Toast.fail(message, 2)
       }
       if (+code === 100001) {
         if (isAndall()) {
