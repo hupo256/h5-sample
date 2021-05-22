@@ -31,7 +31,8 @@
 import React from 'react'
 import Loadable from '@src/components/loading/index'
 const SayHi = Loadable(() => import('fdTest/sayHi'))
-const ShowTex = Loadable(() => import('./showTex'))
+const RemoteSlides = Loadable(() => import('app1/Slides'))
+const ShowTex = Loadable(() => import('./egg/showTex'))
 // import ShowTex from './showTex'
 // const RemoteNewsList = React.lazy(() => import("app2/NewsList"));
 
@@ -43,6 +44,7 @@ const App = () => (
   <div>
     <h2>App1, Local Slides, Remote NewsList</h2>
     <ShowTex />
+    <RemoteSlides />
     <SayHi />
   </div>
 )
