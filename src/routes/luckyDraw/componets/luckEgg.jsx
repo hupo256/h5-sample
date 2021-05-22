@@ -1,11 +1,14 @@
 import React, { useState, useContext } from 'react'
 import $ from 'jquery'
+import Loadable from '@src/components/loading/index'
 import { ctx } from '../common/context'
 import Header from '../common/header'
 import Rulebox from '../common/rulebox'
 import Footer from '../common/footer'
 import { eggImg } from '../tools/data'
 import styles from './egg.scss'
+
+const SayHi = Loadable(() => import('fdTest/sayHi'))
 
 export default function Lucky(props) {
   const { history } = props
@@ -96,6 +99,8 @@ export default function Lucky(props) {
   return (
     <div className={styles.luckybox}>
       {/* 头部 */}
+      <p>wwee eerrt</p>
+      <SayHi />
       <Header {...props} baseImg={eggImg} from="egg" />
 
       <div className={styles.main}>

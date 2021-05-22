@@ -1,8 +1,125 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta name="referrer" content="no-referrer" />
+    <meta charset="UTF-8" />
+    <!--允许全屏-->
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no,shrink-to-fit=no,viewport-fit=cover" />
+    <title></title>
+    <script>
+      !(function () {
+        var a =
+            'html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,input,textarea,p,th,td,hr,button{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5{font-size:100%;font-weight:600}}a:hover{text-decoration:underline}ins,a{text-decoration:none}',
+          b = document.createElement('style')
+        if ((document.getElementsByTagName('head')[0].appendChild(b), b.styleSheet)) b.styleSheet.disabled || (b.styleSheet.cssText = a)
+        else
+          try {
+            b.innerHTML = a
+          } catch (c) {
+            b.innerText = a
+          }
+      })(),
+        (function (a, b) {
+          var d,
+            e = a.document,
+            f = e.documentElement,
+            g = e.querySelector('meta[name="viewport"]'),
+            h = e.querySelector('meta[name="flexible"]'),
+            i = 0,
+            j = 0,
+            k = b.flexible || (b.flexible = {})
+          function c() {
+            var b = f.getBoundingClientRect().width
+            b / i > 540 && (b = 540 * i)
+            var c = b / 10
+            ;(f.style.fontSize = c + 'px'), (k.rem = a.rem = c)
+          }
+          if (g) {
+            console.warn('将根据已有的meta标签来设置缩放比例')
+            var l = g.getAttribute('content').match(/initial\-scale=([\d\.]+)/)
+            l && ((j = parseFloat(l[1])), (i = parseInt(1 / j)))
+          } else if (h) {
+            var m = h.getAttribute('content')
+            if (m) {
+              var n = m.match(/initial\-dpr=([\d\.]+)/),
+                o = m.match(/maximum\-dpr=([\d\.]+)/)
+              n && ((i = parseFloat(n[1])), (j = parseFloat((1 / i).toFixed(2)))), o && ((i = parseFloat(o[1])), (j = parseFloat((1 / i).toFixed(2))))
+            }
+          }
+          if (!i && !j) {
+            var p = (a.navigator.appVersion.match(/android/gi), a.navigator.appVersion.match(/iphone/gi)),
+              q = a.devicePixelRatio
+            j = 1 / (i = p ? (q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1) : 1)
+          }
+          if ((f.setAttribute('data-dpr', i), !g))
+            if (
+              ((g = e.createElement('meta')).setAttribute('name', 'viewport'),
+              g.setAttribute('content', 'initial-scale=' + j + ', maximum-scale=' + j + ', minimum-scale=' + j + ', user-scalable=no'),
+              f.firstElementChild)
+            )
+              f.firstElementChild.appendChild(g)
+            else {
+              var r = e.createElement('div')
+              r.appendChild(g), e.write(r.innerHTML)
+            }
+          a.addEventListener(
+            'resize',
+            function () {
+              clearTimeout(d), (d = setTimeout(c, 300))
+            },
+            !1,
+          ),
+            a.addEventListener(
+              'pageshow',
+              function (a) {
+                a.persisted && (clearTimeout(d), (d = setTimeout(c, 300)))
+              },
+              !1,
+            ),
+            'complete' === e.readyState
+              ? (e.body.style.fontSize = 12 * i + 'px')
+              : e.addEventListener(
+                  'DOMContentLoaded',
+                  function () {
+                    e.body.style.fontSize = 12 * i + 'px'
+                  },
+                  !1,
+                ),
+            c(),
+            (k.dpr = a.dpr = i),
+            (k.refreshRem = c),
+            (k.rem2px = function (a) {
+              var b = parseFloat(a) * this.rem
+              return 'string' == typeof a && a.match(/rem$/) && (b += 'px'), b
+            }),
+            (k.px2rem = function (a) {
+              var b = parseFloat(a) / this.rem
+              return 'string' == typeof a && a.match(/px$/) && (b += 'rem'), b
+            })
+        })(window, window.lib || (window.lib = {}))
+      var _paq = _paq || []
+      _paq.push(['trackPageView']), _paq.push(['enableLinkTracking'])
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+    <div id="skeleton">
+      <svg width="100vw" viewBox="0 0 375 667" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>iPhone 8</title>
+        <desc>Created with Sketch.</desc>
+        <g id="iPhone-8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <rect id="we" fill="#FFFFFF" x="0" y="0" width="375" height="603"></rect>
+          <rect id="ss" fill="#F1F1F1" opacity="0.900000036" x="15" y="36" width="71" height="14"></rect>
+          <rect id="ed" fill="#F1F1F1" x="15" y="14" width="103" height="14"></rect>
+          <rect id="ss-2" fill="#F1F1F1" opacity="0.900000036" x="44" y="81" width="287" height="20"></rect>
+          <rect id="ss-4" fill="#F1F1F1" opacity="0.900000036" x="44" y="120" width="287" height="106"></rect>
+          <rect id="ss-5" fill="#F1F1F1" opacity="0.900000036" x="44" y="257" width="287" height="202"></rect>
+          <rect id="ss-6" fill="#F1F1F1" opacity="0.900000036" x="20" y="478" width="335" height="182"></rect>
+        </g>
+      </svg>
+    </div>
   </body>
 </html>

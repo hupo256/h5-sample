@@ -7,6 +7,7 @@ export default function BaseLayer(props) {
   const [bool, setbool] = useState(false)
   useEffect(() => {
     init()
+    setbool(true)
   }, [])
 
   // 获取初始化数据
