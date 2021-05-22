@@ -157,13 +157,16 @@ const webpackConfig = {
       remotes: {
         fdTest: 'fdTest@http://localhost:3004/remoteEntry.js',
       },
-      shared: ['react', 'react-dom', 'react-router-dom'],
+      shared: {
+        react: { singleton: true, eager: true },
+        'react-dom': { singleton: true },
+      },
     }),
   ],
   devtool: sourcemaps ? 'eval-source-map' : 'source-map',
   devServer: {
     hot: true,
-    host: `${ip.address()}`,
+    // host: `${ip.address()}`,
     port: 8081,
     historyApiFallback: true,
     contentBase: './static',

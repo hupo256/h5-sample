@@ -29,22 +29,21 @@
 // export default routes
 
 import React from 'react'
+import Loadable from '@src/components/loading/index'
+const SayHi = Loadable(() => import('fdTest/sayHi'))
+const ShowTex = Loadable(() => import('./showTex'))
 // import ShowTex from './showTex'
 // const RemoteNewsList = React.lazy(() => import("app2/NewsList"));
 
 // SayHi是在remote项目里写的组件
 // import(`${name/exposes[name]}`)
-const SayHi = React.lazy(() => import('fdTest/sayHi'))
+// const SayHi = React.lazy(() => import('fdTest/sayHi'))
 
 const App = () => (
   <div>
-    <h2 style={{ textAlign: 'center' }}>App1, Local Slides, Remote NewsList</h2>
-    {/* <ShowTex /> */}
-
-    <React.Suspense fallback="Loading Slides">
-      {/* 然后常规调用组件 */}
-      <SayHi />
-    </React.Suspense>
+    <h2>App1, Local Slides, Remote NewsList</h2>
+    <ShowTex />
+    <SayHi />
   </div>
 )
 
