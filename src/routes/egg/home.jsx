@@ -9,7 +9,7 @@ const SayHi = Loadable(() => import('fdTest/sayHi'))
 export default function App() {
   return (
     <Page title={`webpack5`}>
-      <h2>App 3, WWEE </h2>
+      <h2>App, wwweee 23452345 </h2>
       <SayHi />
       <ShowTex />
       <RemoteSlides />

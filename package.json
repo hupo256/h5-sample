@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=local webpack-dev-server --hot",
+        "start": "cross-env NODE_ENV=local webpack-dev-server --inline --hot",
         "dev": "cross-env NODE_ENV=dev webpack",
         "test": "cross-env NODE_ENV=test MODULE=luckyDraw webpack",
         "build": "cross-env NODE_ENV=prod webpack",
@@ -33,7 +33,7 @@
         "less-loader": "^9.0.0",
         "mini-css-extract-plugin": "^1.6.0",
         "node-sass": "^4.13.1",
-        "optimize-css-assets-webpack-plugin": "^5.0.3",
+        "optimize-css-assets-webpack-plugin": "^6.0.0",
         "postcss-loader": "^3.0.0",
         "postcss-pxtorem": "^4.0.1",
         "sass-loader": "^9.0.2",
@@ -44,7 +44,7 @@
         "webpack": "5.30.0",
         "webpack-cli": "^3.3.12",
         "webpack-dev-server": "^3.11.2",
-        "webpack-parallel-uglify-plugin": "^1.1.2"
+        "webpack-parallel-uglify-plugin": "^2.0.0"
     },
     "dependencies": {
         "antd-mobile": "^2.2.3",
