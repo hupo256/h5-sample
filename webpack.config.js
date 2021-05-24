@@ -17,12 +17,12 @@ const webpackConfig = {
   mode: 'development',
   devtool: sourcemaps ? 'eval-source-map' : 'source-map',
   devServer: {
-    // hot: true,
-    // host: `${ip.address()}`,
     port: 8081,
     historyApiFallback: true,
-    contentBase: './static',
+    contentBase: resolve('dist'),
+    // hot: true,
     // inline: true,
+    // host: `${ip.address()}`,
   },
   output: {
     // filename: 'js/[name].[hash:8].js',
@@ -52,11 +52,6 @@ const webpackConfig = {
         exclude: /node_modules/,
         loader: 'babel-loader',
       },
-      // {
-      //   test: /\.(ts|tsx)$/,
-      //   exclude: /node_modules/,
-      //   loader: ['babel-loader?cacheDirectory', 'ts-loader'],
-      // },
       {
         test: /\.(c|sa|sc)ss$/,
         use: [
