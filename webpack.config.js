@@ -31,12 +31,12 @@ const webpackConfig = {
     publicPath: 'http://localhost:8081/',
     // chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
-  output: {
-    filename: 'js/[name].[hash:8].js',
-    path: resolve(MODULE || 'dist'),
-    publicPath: 'http://localhost:8081/',
-    chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
-  },
+  // output: {
+  //   filename: 'js/[name].[hash:8].js',
+  //   path: resolve(MODULE || 'dist'),
+  //   publicPath: 'http://localhost:8081/',
+  //   chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
+  // },
   resolve: {
     alias: {
       '@src': resolve('./src'),
@@ -164,9 +164,31 @@ const webpackConfig = {
       },
       remotes: {
         fdTest: 'fdTest@http://localhost:3004/remoteEntry.js',
-        app1: 'app1@http://localhost:3001/remoteEntry.js',
+        // app1: 'app1@http://localhost:3001/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
+      // shared: {
+      //   reactRexport: {
+      //     import: 'react',
+      //     shareKey: 'react',
+      //     shareScope: 'default',
+      //     singleton: true,
+      //     eager: true,
+      //     // don't use shared version when version isn't valid. Singleton or modules without fallback will throw, otherwise fallback is used
+      //     // strictVersion: true,
+      //     version: require('react').version,
+      //     requiredVersion: require('./package.json').dependencies['react'],
+      //   },
+      // },
+      // shared: {
+      //   react: { singleton: true, eager: true },
+      //   // 'react-dom': { singleton: true, eager: true },
+      //   // 'react-router-dom': { singleton: true, eager: true },
+      // },
+      // shared: {
+      //   react: { eager: true },
+      //   // "react-dom": { eager: true },
+      // },
     }),
   ],
 }
