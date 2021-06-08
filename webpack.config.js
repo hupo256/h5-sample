@@ -20,23 +20,10 @@ const webpackConfig = {
     port: 8081,
     historyApiFallback: true,
     contentBase: resolve('dist'),
-    // hot: true,
-    // inline: true,
-    // host: `${ip.address()}`,
   },
   output: {
-    // filename: 'js/[name].[hash:8].js',
-    // path: resolve(MODULE || 'dist'),
-    // publicPath: thePublicPath,
     publicPath: 'http://localhost:8081/',
-    // chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
   },
-  // output: {
-  //   filename: 'js/[name].[hash:8].js',
-  //   path: resolve(MODULE || 'dist'),
-  //   publicPath: 'http://localhost:8081/',
-  //   chunkFilename: 'js/[name].[chunkhash:8].chunk.js',
-  // },
   resolve: {
     alias: {
       '@src': resolve('./src'),
