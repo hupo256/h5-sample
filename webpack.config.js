@@ -148,10 +148,11 @@ const webpackConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './showTex': './src/routes/egg/showTex',
+        './breadBar': './src/components/breadBar',
       },
       remotes: {
         fdTest: 'fdTest@http://localhost:3004/remoteEntry.js',
-        // app1: 'app1@http://localhost:3001/remoteEntry.js',
+        mktAntd: 'mktAntd@http://localhost:8000/remoteEntry.js',
       },
       shared: ['react', 'react-dom', 'react-router-dom'],
     }),
