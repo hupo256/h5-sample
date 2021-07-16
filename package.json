@@ -47,6 +47,7 @@
         "webpack-parallel-uglify-plugin": "^2.0.0"
     },
     "dependencies": {
+        "antd": "^4.16.7",
         "antd-mobile": "^2.2.3",
         "axios": "^0.18.0",
         "babel-polyfill": "^6.26.0",

@@ -1,0 +1,24 @@
+$hightColor: #ff7300;
+$grayColor: #b5b5b5;
+.breadBox {
+  padding: 1.5em 0;
+  color: $grayColor;
+
+  span,
+  a {
+    color: $grayColor;
+    font-size: 12px;
+  }
+  a:hover {
+    color: $hightColor;
+  }
+
+  span:nth-child(4) {
+    display: inline-block;
+    width: 30em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: middle;
+  }
+}
